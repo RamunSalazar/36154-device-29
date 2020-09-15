@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Gilroy'),
+    url('../fonts/gilroyextrabold.woff2') format('woff2'),
+    url('../fonts/gilroyextrabold.woff') format('woff');
+}
+
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-grey: #464646;
+  --basic-half-grey: #7E7E7E;
+  --basic-grey-light: #E5E5E5;
+  --basic-white: #ffffff;
+
+  --special-yellow-dark: #F0C52E;
+  --special-yellow-light: #F7E296;
+  --special-green: #91C92F;
+
+  --status: #F6DADA;
+}
+
+.page-body {
+  min-width: 1160px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Gilroy', 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: var(--basic-black);
+}
+a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+li {
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.main-title {
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+.main-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+.main-contents-title {
+  display: none;
+}
+.main-header {
+  background-color: var(--special-yellow-light);
+}
+.main-header-links-item {
+  line-height: 20px;
+}
+.main-container {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.main-header-drop-down-menu:hover {
+  cursor: pointer;
+}
+.link-hover:hover {
+  opacity: 0.6;
+}
+.link-active:active {
+  opacity: 0.3;
+}
+.promo-items {
+  background: var(--special-yellow-light);
+}
+.promo-item-number {
+  color: var(--basic-white);
+  font-size: 179px;
+  line-height: 219px;
+  text-transform: uppercase;
+}
+.promo-item-text {
+  line-height: 20px;
+}
+.button {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.promo-item-table {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+.promo-item-table-value {
+  font-size: 36px;
+  line-height: 42px;
+}
+.promo-item-table-property {
+  font-size: 13px;
+  line-height: 15px;
+}
+.popular-sections-img {
+  width: 160px;
+  height: 160px;
+  background: var(--special-yellow-light);
+}
+.popular-sections-text {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+.service {
+  background-color: var(--basic-grey-light);
+}
+.secvice-button {
+  border: none;
+  font-weight: 800;
+  width: 220px;
+  height: 40px;
+}
+.service-title {
+  letter-spacing: 0.2em;
+}
+.section-text {
+  line-height: 28px;
+}
+.service-text {
+  letter-spacing: 0.1em;
+}
+.about-us-list-item {
+  list-style-type: circle;
+}
+.main-footer {
+  background-color: var(--basic-dark);
+}
+.main-footer-address {
+  color: var(--basic-white);
+  line-height: 20px;
+}
+.main-footer-link {
+  color: var(--basic-white);
+  letter-spacing: 0.2em;
+}
+.main-footer-social-link:hover {
+  opacity: 0.6;
+}
+.main-footer-social-link:active {
+  opacity: 0.1;
+}
+.main-footer-nav-link {
+  color: var(--basic-white);
+  opacity: 0.7;
+}
+.main-footer-nav-link:hover {
+  opacity: 0.9;
+}
+.main-footer-nav-link:active {
+  opacity: 0.3;
+}
+.main-footer-phone {
+  color: var(--basic-white);
+}
