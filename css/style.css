@@ -31,7 +31,7 @@
   --status: #F6DADA;
 }
 
-.page-body {
+.page__body {
   min-width: 1160px;
   padding: 0;
   margin: 0;
@@ -42,173 +42,182 @@
   line-height: 20px;
   color: var(--basic-black);
 }
+
 .link {
   text-decoration: none;
   color: var(--basic-black);
 }
-.list-item{
+
+.list__item{
   list-style-type: none;
 }
+
 .img {
   max-width: 100%;
   height: auto;
 }
-.content-title {
+
+.content__title {
   display: none;
 }
 
-.header {
-  background-color: var(--special-yellow-light);
-}
-.header-link:hover,
-.footer-link:hover {
-  opacity: 0.6;
-}
-.header-link:active,
-.footer-link:active {
-  opacity: 0.3;
-}
-.header-drop_down_menu,
-.nav-link,
-.promo-number,
-.promo-title,
-.promo-link,
-.sections-title,
-.secvice-button,
-.service-title,
-.about_us-title,
-.transport-text,
-.about_us-link,
-.contact-title,
-.contact-link,
-.footer-nav_link {
+.navigation__link,
+.promo__number,
+.title,
+.service__button,
+.about-us__transport {
   font-family: 'Gilroy', sans-serif;
   font-style: normal;
   font-weight: 800;
+}
+
+.header{
+  background-color: var(--special-yellow-light);
+}
+
+.main__link:hover {
+  opacity: 0.6;
+}
+
+.main__link:active {
+  opacity: 0.3;
+}
+
+.navigation__link,
+.service__button {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.promo-title,
-.sections-title,
-.service-title,
-.about_us-title,
-.transport-text,
-.contact-title {
-  text-transform: none;
-}
-.promo-item {
+
+.promo {
   background-color: var(--special-yellow-light);
 }
-.promo-number {
+
+.promo__number {
   font-size: 179px;
   line-height: 219px;
-  letter-spacing: 0;
   color: var(--basic-white);
+  text-transform: uppercase;
 }
-.promo-title {
+
+.promo__title {
   font-size: 47px;
   line-height: 58px;
-  letter-spacing: 0;
 }
-.product-value,
-.product-property {
+
+.promo__description {
   font-family: 'Gilroy', sans-serif;
+  font-style: normal;
   font-weight: 300;
   letter-spacing: 0.1em;
 }
-.product-value {
+
+.promo__value {
   font-size: 36px;
   line-height: 42px;
+
 }
-.product-property {
+
+.promo__property {
   font-size: 13px;
   line-height: 15px;
 }
-.slider-button {
+
+.promo__button {
   width: 12px;
   height: 12px;
+  border-radius: 50%;
   border: 1px solid var(--basic-black);
   box-sizing: border-box;
-  border-radius: 50%;
 }
-.sections-item {
+
+.promo__button:hover {
+  cursor: pointer;
+}
+
+.category__item {
   width: 160px;
 }
-.sections-img {
+
+.category__img-wrap {
   width: 160px;
   height: 160px;
   background-color: var(--special-yellow-light);
 }
-.sections-title {
+
+.catigory_title {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
 }
-.sections-item:nth-child(4) .sections-title{
-  letter-spacing: 0;
-}
-.service {
-  background-color: var(--basic-grey-light);
-}
-.secvice-button {
+
+.service__button {
   border: none;
 }
-.service-title {
+
+.service__button:hover {
+  cursor: pointer;
+}
+
+.service__title {
   font-size: 47px;
   line-height: 58px;
+  letter-spacing: 0.2em;
 }
-.service-text {
+
+.service__text {
   line-height: 28px;
   letter-spacing: 0.1em;
 }
-.about_us-title {
+
+.about-us__title,
+.contacs__title {
   font-size: 47px;
   line-height: 58px;
+  letter-spacing: 0.2em;
 }
-.about_us-text,
-.contact-text {
-  font-size: 15px;
+
+.about-us__text,
+.contacts__text {
   line-height: 28px;
 }
-.transport-item {
+
+.about-us__item {
   list-style-type: circle;
 }
-.transport-text {
-  font-size: 16px;
-  line-height: 28px;
-}
-.contact-title {
-  font-size: 47px;
-  line-height: 58px;
-}
-.contact-img:hover {
+.contacts__img:hover {
   cursor: pointer;
 }
 .footer {
   color: var(--basic-white);
   background-color: var(--basic-dark);
 }
-.footer-nav_link,
-.footer-control_link {
+
+.footer__link {
   color: var(--basic-white);
 }
-.social-link {
+
+.social__link {
   opacity: 0.3;
 }
-.social-link:hover {
+
+.social__link:hover {
   opacity: 0.6;
 }
-.social-link:active {
+
+.social__link:active {
   opacity: 0.1;
 }
-.footer-control_link {
+
+.footer-control__link {
   opacity: 0.7;
 }
-.footer-control_link:hover {
+.footer-control__link:hover {
   opacity: 1;
 }
-.footer-control_link:active {
+
+.footer-control__link:active {
   opacity: 0.3;
 }
