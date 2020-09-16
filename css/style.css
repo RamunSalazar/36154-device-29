@@ -1,6 +1,15 @@
 @font-face {
   font-family: 'Gilroy';
   font-style: normal;
+  font-weight: 300;
+  src: local('Gilroy'),
+    url('../fonts/gilroylight.woff2') format('woff2'),
+    url('../fonts/gilroylight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
   font-weight: 800;
   src: local('Gilroy'),
     url('../fonts/gilroyextrabold.woff2') format('woff2'),
@@ -26,143 +35,180 @@
   min-width: 1160px;
   padding: 0;
   margin: 0;
-  font-family: 'Gilroy', 'Open Sans', sans-serif;
-  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
   color: var(--basic-black);
 }
-a {
+.link {
   text-decoration: none;
   color: var(--basic-black);
 }
-li {
+.list-item{
   list-style-type: none;
 }
-img {
+.img {
   max-width: 100%;
   height: auto;
 }
-.main-title {
-  font-weight: 800;
-  font-size: 47px;
-  line-height: 58px;
-}
-.main-text {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-}
-.main-contents-title {
+.content-title {
   display: none;
 }
-.main-header {
+
+.header {
   background-color: var(--special-yellow-light);
 }
-.main-header-links-item {
-  line-height: 20px;
-}
-.main-container {
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.main-header-drop-down-menu:hover {
-  cursor: pointer;
-}
-.link-hover:hover {
+.header-link:hover,
+.footer-link:hover {
   opacity: 0.6;
 }
-.link-active:active {
+.header-link:active,
+.footer-link:active {
   opacity: 0.3;
 }
-.promo-items {
-  background: var(--special-yellow-light);
-}
-.promo-item-number {
-  color: var(--basic-white);
-  font-size: 179px;
-  line-height: 219px;
-  text-transform: uppercase;
-}
-.promo-item-text {
-  line-height: 20px;
-}
-.button {
+.header-drop_down_menu,
+.nav-link,
+.promo-number,
+.promo-title,
+.promo-link,
+.sections-title,
+.secvice-button,
+.service-title,
+.about_us-title,
+.transport-text,
+.about_us-link,
+.contact-title,
+.contact-link,
+.footer-nav_link {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.promo-item-table {
+.promo-title,
+.sections-title,
+.service-title,
+.about_us-title,
+.transport-text,
+.contact-title {
+  text-transform: none;
+}
+.promo-item {
+  background-color: var(--special-yellow-light);
+}
+.promo-number {
+  font-size: 179px;
+  line-height: 219px;
+  letter-spacing: 0;
+  color: var(--basic-white);
+}
+.promo-title {
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0;
+}
+.product-value,
+.product-property {
+  font-family: 'Gilroy', sans-serif;
   font-weight: 300;
   letter-spacing: 0.1em;
 }
-.promo-item-table-value {
+.product-value {
   font-size: 36px;
   line-height: 42px;
 }
-.promo-item-table-property {
+.product-property {
   font-size: 13px;
   line-height: 15px;
 }
-.popular-sections-img {
+.slider-button {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--basic-black);
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.sections-item {
+  width: 160px;
+}
+.sections-img {
   width: 160px;
   height: 160px;
-  background: var(--special-yellow-light);
+  background-color: var(--special-yellow-light);
 }
-.popular-sections-text {
+.sections-title {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
+}
+.sections-item:nth-child(4) .sections-title{
+  letter-spacing: 0;
 }
 .service {
   background-color: var(--basic-grey-light);
 }
 .secvice-button {
   border: none;
-  font-weight: 800;
-  width: 220px;
-  height: 40px;
 }
 .service-title {
-  letter-spacing: 0.2em;
-}
-.section-text {
-  line-height: 28px;
+  font-size: 47px;
+  line-height: 58px;
 }
 .service-text {
+  line-height: 28px;
   letter-spacing: 0.1em;
 }
-.about-us-list-item {
+.about_us-title {
+  font-size: 47px;
+  line-height: 58px;
+}
+.about_us-text,
+.contact-text {
+  font-size: 15px;
+  line-height: 28px;
+}
+.transport-item {
   list-style-type: circle;
 }
-.main-footer {
+.transport-text {
+  font-size: 16px;
+  line-height: 28px;
+}
+.contact-title {
+  font-size: 47px;
+  line-height: 58px;
+}
+.contact-img:hover {
+  cursor: pointer;
+}
+.footer {
+  color: var(--basic-white);
   background-color: var(--basic-dark);
 }
-.main-footer-address {
+.footer-nav_link,
+.footer-control_link {
   color: var(--basic-white);
-  line-height: 20px;
 }
-.main-footer-link {
-  color: var(--basic-white);
-  letter-spacing: 0.2em;
-}
-.main-footer-social-link:hover {
-  opacity: 0.6;
-}
-.main-footer-social-link:active {
-  opacity: 0.1;
-}
-.main-footer-nav-link {
-  color: var(--basic-white);
-  opacity: 0.7;
-}
-.main-footer-nav-link:hover {
-  opacity: 0.9;
-}
-.main-footer-nav-link:active {
+.social-link {
   opacity: 0.3;
 }
-.main-footer-phone {
-  color: var(--basic-white);
+.social-link:hover {
+  opacity: 0.6;
+}
+.social-link:active {
+  opacity: 0.1;
+}
+.footer-control_link {
+  opacity: 0.7;
+}
+.footer-control_link:hover {
+  opacity: 1;
+}
+.footer-control_link:active {
+  opacity: 0.3;
 }
