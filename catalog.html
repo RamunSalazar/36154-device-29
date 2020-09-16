@@ -1,168 +1,184 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
     <title>Каталог - Девайс</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page__body">
 
-    <header>
-      <div>
-        <a href="/">
-          <img src="img/-e-logo.png" width="163" height="35" alt="Логотип магазина Девайс">
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="main__link header__logo">
+          <img class="img" src="img/-e-logo.png" width="163" height="35" alt="Логотип магазина Девайс">
         </a>
-        <div>
+        <div class="header-control">
           <!-- Поиска по сайту -->
-          <a href="">Имя пользователя</a>
-          <button type="button">Выйти</button>
-          <a href="">Сравнить</a>
-          <a href="">Корзина</a>
+          <a href="" class="link main__link header-control__link">Имя пользователя</a>
+          <button type="button" class="catalog__button header-control__button">Выйти</button>
+          <a href="" class="link main__link header-control__link">Сравнить</a>
+          <a href="" class="link main__link header-control__link">Корзина</a>
         </div>
-        <div>
-          <p>каталог товаров</p>
-          <nav>
-            <ul>
-              <li><a href="">доставка</a></li>
-              <li><a href="">гарантия</a></li>
-              <li><a href="">контакты</a></li>
+        <div class="header__link-wrap">
+          <a href="catalog.html" class="link main__link navigation__link">каталог товаров</a>
+          <nav class="navigation header__navigation">
+            <ul class="list navigation__list header__list">
+              <li class="list__item navigation__item header__item">
+                <a href="" class="link main__link navigation__link">доставка</a>
+              </li>
+              <li class="list__item navigation__item header__item">
+                <a href="" class="link main__link navigation__link">гарантия</a>
+              </li>
+              <li class="list__item navigation__item header__item">
+                <a href="" class="link main__link navigation__link">контакты</a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <main>
-      <h1>Каталог</h1>
-      <div>
-        <h2>Название категории</h2>
-        <a href="">Главная</a>
-        <a href="">Каталог товаров</a>
-        <a href="">Моноподы для селфи</a>
+    <main class="content">
+      <h1 class="content__title">Каталог</h1>
+      <div class="catalog-control">
+        <h2 class="title catalog-control__title">Моноподы для селфи</h2>
+        <a href="" class="link catalog-control__link">Главная</a>
+        <a href="" class="link catalog-control__link">Каталог товаров</a>
+        <a href="" class="link catalog-control__link">Моноподы для селфи</a>
       </div>
-      <section>
-        <h2>Меню каталога</h2>
-        <div>
-          <p>фильтр:</p>
+      <section class="section catalog">
+        <h2 class="content__title">Меню каталога</h2>
+        <div class="calalog-block catalog-wrap">
+          <h3 class="title catalog__title">фильтр:</h3>
         </div>
-        <div>
-          <p>сортировка:</p>
-          <p>По цене</p>
-          <p>По типу</p>
-          <p>По популярности</p>
-          <div>
-            <button type="button"></button>
-            <button type="button"></button>
+        <div class="calalog-block sorting">
+          <h3 class="title sorting__title">сортировка:</h3>
+          <div class="left-control">
+            <button type="button" class="catalog__button sorting__button left-control__button">По цене</button>
+            <button type="button" class="catalog__button sorting__button left-control__button">По типу</button>
+            <button type="button" class="catalog__button sorting__button left-control__button">По популярности</button>
+          </div>
+          <div class="right-control">
+            <button type="button" class="catalog__button sorting__button right-control__button">
+              <img src="img/Vector(4).png" width="10" height="11" alt="Стрелка вверх">
+            </button>
+            <button type="button" class="catalog__button sorting__button right-control__button">
+              <img src="img/Vector(5).png" width="10" height="11" alt="Стрелка вниз">
+            </button>
           </div>
         </div>
-        <div>
+        <div class="calalog-block filter">
           <!--Фильтр каталога-->
         </div>
-        <div>
-          <ul>
-            <li>
-              <figure>
-                <img src="img/item-11.png" width="360" height="380" alt="Любительская селфи-палка">
-                <figcaption>
-                    <a href="">Любительская селфи-палка</a> 500 руб.
+        <div class="calalog-block catalog-cart">
+          <ul class="list catalog-cart__list">
+            <li class="list__item catalog-cart__item">
+              <figure class="cart">
+                <img class="img cart__img" src="img/item-11.png" width="360" height="380" alt="Любительская селфи-палка">
+                <figcaption class="cart__title">
+                  <a href="" class="link cart__link">Любительская<br> селфи-палка</a> 500 руб.
                 </figcaption>
               </figure>
             </li>
-            <li>
-              <figure>
-                <img src="img/item-21.png" width="360" height="380" alt="Профессиональная селфи-палка">
-                <figcaption>
-                    <a href="">Профессиональная селфи-палка</a> 1 500 руб.
+            <li class="list__item catalog-cart__item">
+              <figure class="cart">
+                <img class="img cart__img" src="img/item-21.png" width="360" height="380" alt="Профессиональная селфи-палка">
+                <figcaption class="cart__title">
+                    <a href="" class="link cart__link">Профессиональная<br> селфи-палка</a> 1 500 руб.
                 </figcaption>
               </figure>
             </li>
-            <li>
-              <figure>
-                <img src="img/item-31.png" width="360" height="380" alt="Непотопляемая селфи-палка">
-                <figcaption>
-                  <a href="">Непотопляемая селфи-палка</a> 2 500 руб.
+            <li class="list__item catalog-cart__item">
+              <figure class="cart">
+                <img class="img cart__img" src="img/item-31.png" width="360" height="380" alt="Непотопляемая селфи-палка">
+                <figcaption class="cart__title">
+                  <a href="" class="link cart__link">Непотопляемая<br> селфи-палка</a> 2 500 руб.
                 </figcaption>
               </figure>
             </li>
-            <li>
-              <figure>
-                <img src="img/item-41.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                <figcaption>
-                  <a href="">Селфи-палка «Следуй за мной»</a> 4 900 руб.
+            <li class="list__item catalog-cart__item">
+              <figure class="cart">
+                <img class="img cart__img" src="img/item-41.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                <figcaption class="cart__title">
+                  <a href="" class="link cart__link">Селфи-палка<br> «Следуй за мной»</a> 4 900 руб.
                 </figcaption>
               </figure>
             </li>
           </ul>
-          <div>
-            <button type="button">назад</button>
-            <ul>
-              <li>
-                <a href="">1</a>
+          <div class="switch-page">
+            <button type="button" class="switch-page__control switch-page__button back__button">назад</button>
+            <ul class="list switch-page__list">
+              <li class="list__item switch-page__item">
+                <a href="" class="link switch-page__control switch-page__link">1</a>
               </li>
-              <li>
-                <a href="">2</a>
+              <li class="list__item switch-page__item">
+                <a href="" class="link switch-page__control switch-page__link">2</a>
               </li>
-              <li>
-                <a href="">3</a>
+              <li class="list__item switch-page__item">
+                <a href="" class="link switch-page__control switch-page__link">3</a>
               </li>
             </ul>
-            <button type="button">вперед</button>
+            <button type="button" class="switch-page__control switch-page__button forward__button">вперед</button>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div>
-        <div>
-          <a href="/">
-            <img src="img/-e-logo.png" width="163" height="35" alt="Логотип магазина Девайс">
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__left-column">
+          <a href="index.html" class="main__link footer__logo">
+            <img class="img" src="img/-e-logo(1).png" width="163" height="35" alt="Логотип магазина Девайс">
           </a>
-          <p>г. Москва, ул. Строителей, 15</p>
+          <p class="address">г. Москва, ул. Строителей, 15</p>
         </div>
-        <div>
-          <ul>
-            <li>
-              <a href="">доставка</a>
-            </li>
-            <li>
-              <a href="">гарантия</a>
-            </li>
-            <li>
-              <a href="">контакты</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="">
-                <img src="img/Vector.png" width="32" height="32" alt="Фейсбук">
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="img/Vector(1).png" width="32" height="32" alt="Инстаграм">
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="img/Vector(2).png" width="32" height="32" alt="Твиттер">
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <div>
-            <a href="">Имя пользователя</a>
-            <button type="button">Выйти</button>
-            <a href="">Сравнить</a>
-            <a href="">Корзина</a>
+        <div class="footer__center-column">
+          <nav class="navigation footer__navigation">
+            <ul class="list navigation__list footer__list">
+              <li class="list__item navigation__item footer__item">
+                <a href="" class="link main__link navigation__link footer__link">доставка</a>
+              </li>
+              <li class="list__item navigation__item footer__item">
+                <a href="" class="link main__link navigation__link footer__link">гарантия</a>
+              </li>
+              <li class="list__item navigation__item footer__item">
+                <a href="" class="link main__link navigation__link footer__link">контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="social">
+            <ul class="list social__list">
+              <li class="list__item social__item">
+                <a href="" class="link social__link">
+                  <img class="img" src="img/Vector.png" width="32" height="32" alt="Фейсбук">
+                </a>
+              </li>
+              <li class="list__item social__item">
+                <a href="" class="link social__link">
+                  <img class="img" src="img/Vector(1).png" width="32" height="32" alt="Инстаграм">
+                </a>
+              </li>
+              <li class="list__item social__item">
+                <a href="" class="link social__link">
+                  <img class="img" src="img/Vector(2).png" width="32" height="32" alt="Твиттер">
+                </a>
+              </li>
+            </ul>
           </div>
-          <p>Тел.: +7 (495) 495-95-95</p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/Vector(3).png" width="27" height="34" alt="Логотип академии">
+        </div>
+        <div class="footer__right_column">
+          <div class="footer-control">
+            <a href="" class="link footer-control__link footer__link">Имя пользователя</a>
+            <button type="button" class="catalog__button footer-control__button">Выйти</button>
+            <a href="" class="link footer-control__link footer__link">Сравнить</a>
+            <a href="" class="link footer-control__link footer__link">Корзина</a>
+          </div>
+          <p class="phone">Тел.: +7 (495) 495-95-95</p>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="main__link footer__academy-logo">
+            <img class="img" src="img/Vector(3).png" width="27" height="34" alt="Логотип академии">
           </a>
         </div>
       </div>
     </footer>
-
   </body>
 </html>
