@@ -152,6 +152,9 @@
   width: 160px;
   height: 160px;
   background-color: var(--special-yellow-light);
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .catigory_title {
