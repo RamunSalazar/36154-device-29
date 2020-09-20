@@ -213,12 +213,45 @@
 .social__link {
   opacity: 0.3;
 }
+.social_facebook-wrap {
+  width: 32px;
+  height: 32px;
+  background: url('../img/facebook.svg') no-repeat center center;
+}
 
-.social__link:hover {
+.social_facebook-wrap:hover {
   opacity: 0.6;
 }
 
-.social__link:active {
+.social_facebook-wrap:active {
+  opacity: 0.1;
+}
+
+.social_instagram-wrap {
+  width: 32px;
+  height: 32px;
+  background: url('../img/instagram.svg') no-repeat center center;
+}
+
+.social_instagram-wrap:hover {
+  opacity: 0.6;
+}
+
+.social_instagram-wrap:active {
+  opacity: 0.1;
+}
+
+.social_twitter-wrap {
+  width: 32px;
+  height: 32px;
+  background: url('../img/twitter.svg') no-repeat center center;
+}
+
+.social_twitter-wrap:hover {
+  opacity: 0.6;
+}
+
+.social_twitter-wrap:active {
   opacity: 0.1;
 }
 
