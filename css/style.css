@@ -35,8 +35,12 @@
   --status: #F6DADA;
 }
 
+.page {
+  height: 100%;
+}
+
 .page__body {
-  min-width: 1160px;
+  min-width: 1240px;
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -45,11 +49,19 @@
   font-size: 15px;
   line-height: 20px;
   color: var(--basic-black);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 .link {
   text-decoration: none;
   color: var(--basic-black);
+}
+.list {
+  padding: 0;
+  margin: 0;
 }
 
 .list__item{
@@ -65,6 +77,12 @@
   display: none;
 }
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 .navigation__link,
 .promo__number,
 .title,
@@ -77,8 +95,24 @@
   font-weight: 800;
 }
 
-.header{
+.header-container {
   background-color: var(--special-yellow-light);
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+}
+
+.header-control,
+.header__link-wrap {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+
+.header__control-wrap {
+  display: flex;
+}
+
+.navigation__list {
+  display: flex;
 }
 
 .main__link:hover {
@@ -97,15 +131,21 @@
   text-transform: uppercase;
 }
 
-.promo {
-  background-color: var(--special-yellow-light);
+.promo-container {
+  background: var(--special-yellow-light);
 }
 
+.promo__slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .promo__number {
   font-size: 179px;
   line-height: 219px;
   color: var(--basic-white);
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 
 .promo__title {
@@ -144,7 +184,16 @@
   cursor: pointer;
 }
 
-.category__item {
+.category {
+  margin-top: 116px;
+}
+
+.category__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category__item-wrap {
   width: 160px;
 }
 
@@ -161,6 +210,15 @@
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
+}
+
+.service {
+  margin-top: 84px;
+}
+.secvice-container {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  background: var(--basic-grey-light) url(../img/courier.svg) no-repeat right top;
 }
 
 .service__button {
@@ -183,6 +241,22 @@
   letter-spacing: 0.1em;
 }
 
+.logo-container {
+  margin-top: 90px;
+}
+
+.logo__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.index-container {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .about-us__title,
 .contacs__title {
   font-size: 47px;
@@ -198,16 +272,31 @@
 .about-us__item {
   list-style-type: circle;
 }
+
 .contacts__img:hover {
   cursor: pointer;
 }
-.footer {
+
+.footer-container {
   color: var(--basic-white);
   background-color: var(--basic-dark);
+  display: grid;
+  grid-template-columns: 4fr 5fr 4fr;
+}
+
+.footer__center-column {
+   justify-self: center;
+}
+
+.footer__right_column {
+  justify-self: end;
 }
 
 .footer__link {
   color: var(--basic-white);
+}
+.social__list {
+  display: flex;
 }
 
 .social__link {

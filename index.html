@@ -8,15 +8,19 @@
   <body class="page__body">
 
     <header class="header">
-      <div class="container">
+      <div class="container header-container">
         <a href="index.html" class="main__link header__logo">
           <img class="img" src="img/logo.svg" width="163" height="35" alt="Перейти на главную страницу магазина">
         </a>
         <div class="header-control">
-          <!-- Поиска по сайту -->
-          <a href="" class="link main__link header-control__link">Войти</a>
-          <a href="" class="link main__link header-control__link">Сравнить</a>
-          <a href="" class="link main__link header-control__link">Корзина</a>
+          <div class="header__search-form">
+            <!-- Поиска по сайту -->
+          </div>
+          <div class="header__control-wrap">
+            <a href="" class="link main__link header-control__link">Войти</a>
+            <a href="" class="link main__link header-control__link">Сравнить</a>
+            <a href="" class="link main__link header-control__link">Корзина</a>
+          </div>
         </div>
         <div class="header__link-wrap">
           <a href="catalog.html" class="link main__link navigation__link">каталог товаров</a>
@@ -40,39 +44,39 @@
     <main class="content">
       <h1 class="content__title">Магазин Девайс</h1>
       <section class="section promo">
-        <div class="container">
+        <div class="container promo-container">
           <h2 class="content__title">Слайдер с промо товарами</h2>
-            <div class="promo__slide">
-              <div class="promo__img-wrap">
-                <img class="img" src="img/silfie-stick.png" width="384" height="486" alt="Палка для селфи">
-              </div>
-              <div class="promo__description-wrap">
-                <p class="promo__number">01</p>
-                <h3 class="title promo__title">Делай селфи,<br>как Бен Стиллер!</h3>
-                <p class="promo__text">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <a href="" class="link navigation__link promo__link">подробнее</a>
-                <table class="promo__description">
-                  <tr>
-                    <td class="promo__value">8,5 м</td>
-                    <td class="promo__value">5 кг</td>
-                    <td class="promo__value">Карбон</td>
-                  </tr>
-                  <tr>
-                    <td class="promo__property">Длина палки</td>
-                    <td class="promo__property">Вес палки</td>
-                    <td class="promo__property">Материал</td>
-                  </tr>
-                </table>
-              </div>
+          <div class="promo__slide">
+            <div class="promo__img-wrap">
+              <img class="img" src="img/silfie-stick.png" width="384" height="486" alt="Палка для селфи">
             </div>
-            <div class="promo__slide"></div>
-            <div class="promo__slide"></div>
-            <div class="promo__button-wrap">
-              <button type="button" class="promo__button"></button>
-              <button type="button" class="promo__button"></button>
-              <button type="button" class="promo__button"></button>
+            <div class="promo__description-wrap">
+              <p class="promo__number">01</p>
+              <h3 class="title promo__title">Делай селфи,<br>как Бен Стиллер!</h3>
+              <p class="promo__text">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <a href="" class="link navigation__link promo__link">подробнее</a>
+              <table class="promo__description">
+                <tr>
+                  <td class="promo__value">8,5 м</td>
+                  <td class="promo__value">5 кг</td>
+                  <td class="promo__value">Карбон</td>
+                </tr>
+                <tr>
+                  <td class="promo__property">Длина палки</td>
+                  <td class="promo__property">Вес палки</td>
+                  <td class="promo__property">Материал</td>
+                </tr>
+              </table>
             </div>
           </div>
+          <div class="promo__slide"></div>
+          <div class="promo__slide"></div>
+          <div class="promo__button-wrap">
+            <button type="button" class="promo__button"></button>
+            <button type="button" class="promo__button"></button>
+            <button type="button" class="promo__button"></button>
+          </div>
+        </div>
       </section>
 
       <section class="section category">
@@ -80,52 +84,64 @@
         <div class="container">
           <ul class="list category__list">
             <li class="list__item category__item">
-              <a href="" class="link category__link">
-                <div class="category__img-wrap">
-                  <img class="img" src="img/virtual-reality.svg" width="97" height="55" alt="Переход в раздел каталога Виртуальная реальность">
-                </div>
-                <h3 class="title category__title">Виртуальная<br>реальность</h3>
-              </a>
+              <div class="category__item-wrap">
+                <a href="" class="link category__link">
+                  <div class="category__img-wrap">
+                    <img class="img" src="img/virtual-reality.svg" width="97" height="55" alt="Переход в раздел каталога Виртуальная реальность">
+                  </div>
+                  <h3 class="title category__title">Виртуальная<br>реальность</h3>
+                </a>
+              </div>
             </li>
             <li class="list__item category__item">
-              <a href="" class="link category__link">
-                <div class="category__img-wrap">
-                  <img class="img" src="img/silfie-monopods.svg" width="86" height="117" alt="Переход в раздел каталога Моноподы для селфи">
-                </div>
-                <h3 class="title category__title">Моноподы для&nbsp;селфи</h3>
-              </a>
+              <div class="category__item-wrap">
+                <a href="" class="link category__link">
+                  <div class="category__img-wrap">
+                    <img class="img" src="img/silfie-monopods.svg" width="86" height="117" alt="Переход в раздел каталога Моноподы для селфи">
+                  </div>
+                  <h3 class="title category__title">Моноподы для&nbsp;селфи</h3>
+                </a>
+              </div>
             </li>
             <li class="list__item category__item">
-              <a href="" class="link category__link">
-                <div class="category__img-wrap">
-                  <img class="img" src="img/action-camera.svg" width="71" height="87" alt="Переход в раздел каталога Экшн-камеры">
-                </div>
-                <h3 class="title category__title">Экшн-камеры</h3>
-              </a>
+              <div class="category__item-wrap">
+                <a href="" class="link category__link">
+                  <div class="category__img-wrap">
+                    <img class="img" src="img/action-camera.svg" width="71" height="87" alt="Переход в раздел каталога Экшн-камеры">
+                  </div>
+                  <h3 class="title category__title">Экшн-камеры</h3>
+                </a>
+              </div>
             </li>
             <li class="list__item category__item">
-              <a href="" class="link category__link">
-                <div class="category__img-wrap">
-                  <img class="img" src="img/fitness-bracelets.svg" width="107" height="61" alt="Переход в раздел каталога Фитнес-браслеты">
-                </div>
-                <h3 class="title category__title">Фитнес-браслеты</h3>
-              </a>
+              <div class="category__item-wrap">
+                <a href="" class="link category__link">
+                  <div class="category__img-wrap">
+                    <img class="img" src="img/fitness-bracelets.svg" width="107" height="61" alt="Переход в раздел каталога Фитнес-браслеты">
+                  </div>
+                  <h3 class="title category__title">Фитнес-браслеты</h3>
+                </a>
+              </div>
             </li>
             <li class="list__item category__item">
-              <a href="" class="link category__link">
-                <div class="category__img-wrap">
-                  <img class="img" src="img/smartwatch.svg" width="56" height="98" alt="Переход в раздел каталога Умные часы">
-                </div>
-                <h3 class="title category__title">Умные часы</h3>
-              </a>
+              <div class="category__item-wrap">
+                <a href="" class="link category__link">
+                  <div class="category__img-wrap">
+                    <img class="img" src="img/smartwatch.svg" width="56" height="98" alt="Переход в раздел каталога Умные часы">
+                  </div>
+                  <h3 class="title category__title">Умные часы</h3>
+                </a>
+              </div>
             </li>
             <li class="list__item category__item">
-              <a href="" class="link category__link">
-                <div class="category__img-wrap">
-                  <img class="img" src="img/quadcopter.svg" width="132" height="69" alt="Переход в раздел каталога Квадрокоптеры">
-                </div>
-                <h3 class="title category__title">Квадрокоптеры</h3>
-              </a>
+              <div class="category__item-wrap">
+                <a href="" class="link category__link">
+                  <div class="category__img-wrap">
+                    <img class="img" src="img/quadcopter.svg" width="132" height="69" alt="Переход в раздел каталога Квадрокоптеры">
+                  </div>
+                  <h3 class="title category__title">Квадрокоптеры</h3>
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -133,7 +149,7 @@
 
       <section class="section service">
         <h2 class="content__title">Сервис</h2>
-        <div class="container">
+        <div class="container secvice-container">
           <ul class="list service__list">
             <li class="list__item service__item">
               <button type="button" class="service__button">доставка</button>
@@ -156,7 +172,7 @@
 
       <section class="section logo">
         <h2 class="content__title">Логотипы партнеров</h2>
-        <div class="container">
+        <div class="container logo-container">
           <ul class="list logo__list">
             <li class="list__item logo__item">
               <a href="" class="logo__link">
@@ -182,7 +198,7 @@
         </div>
       </section>
 
-      <div class="container">
+      <div class="container index-container">
         <section class="section about-us">
           <h2 class="title about-us__title">О нас</h2>
           <p class="about-us__text">Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
@@ -211,7 +227,7 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-container">
         <div class="footer__left-column">
           <a href="index.html" class="main__link footer__logo">
             <img class="img" src="img/logo-bottom.svg" width="163" height="35" alt="Возврат на главную страницу">
