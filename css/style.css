@@ -133,6 +133,7 @@
 
 .promo-container {
   background: var(--special-yellow-light);
+  margin-bottom: 116px
 }
 
 .promo__slide {
@@ -185,7 +186,7 @@
 }
 
 .category {
-  margin-top: 116px;
+  margin-bottom: 84px;
 }
 
 .category__list {
@@ -213,12 +214,14 @@
 }
 
 .service {
-  margin-top: 84px;
+  margin-bottom: 90px;
+  background-color: var(--basic-grey-light);
 }
-.secvice-container {
+
+.secvice__container {
   display: grid;
   grid-template-columns: max-content 1fr;
-  background: var(--basic-grey-light) url(../img/courier.svg) no-repeat right top;
+  background: url(../img/courier.svg) no-repeat right top;
 }
 
 .service__button {
@@ -241,20 +244,19 @@
   letter-spacing: 0.1em;
 }
 
-.logo-container {
-  margin-top: 90px;
+.partner-container {
+  margin-bottom: 90px;
 }
 
-.logo__list {
+.partner__list {
   display: flex;
   justify-content: space-between;
 }
 
 .index-container {
-  margin-top: 90px;
-  margin-bottom: 90px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 90px;
 }
 
 .about-us__title,
@@ -277,15 +279,18 @@
   cursor: pointer;
 }
 
+.footer {
+  background-color: var(--basic-dark);
+}
+
 .footer-container {
   color: var(--basic-white);
-  background-color: var(--basic-dark);
   display: grid;
   grid-template-columns: 4fr 5fr 4fr;
 }
 
 .footer__center-column {
-   justify-self: center;
+  justify-self: center;
 }
 
 .footer__right_column {
@@ -484,4 +489,8 @@
 
 .footer-control__button:active {
   opacity: 0.3;
+}
+
+.section:last-child {
+  margin-bottom: 0;
 }
