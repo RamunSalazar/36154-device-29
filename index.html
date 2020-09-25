@@ -16,7 +16,7 @@
         </div>
         <div class="header-control">
           <div class="header__search-form">
-            <!-- Поиска по сайту -->
+            <p>Поиска по сайту</p>
           </div>
           <div class="header__control-wrap">
             <a href="" class="link main__link header-control__link">Войти</a>
@@ -28,13 +28,13 @@
           <a href="catalog.html" class="link main__link navigation__link">каталог товаров</a>
           <nav class="navigation header__navigation">
             <ul class="list navigation__list header__list">
-              <li class="list__item navigation__item header__item">
+              <li class="list__item header__item">
                 <a href="" class="link main__link navigation__link">доставка</a>
               </li>
-              <li class="list__item navigation__item header__item">
+              <li class="list__item header__item">
                 <a href="" class="link main__link navigation__link">гарантия</a>
               </li>
-              <li class="list__item navigation__item header__item">
+              <li class="list__item header__item">
                 <a href="" class="link main__link navigation__link">контакты</a>
               </li>
             </ul>
@@ -53,37 +53,40 @@
               <img class="img" src="img/silfie-stick.png" width="384" height="486" alt="Палка для селфи">
             </div>
             <div class="promo__description-wrap">
-              <p class="promo__number">01</p>
-              <h3 class="title promo__title">Делай селфи,<br>как Бен Стиллер!</h3>
-              <p class="promo__text">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a href="" class="link navigation__link promo__link">подробнее</a>
-              <table class="promo__description">
-                <tr>
-                  <td class="promo__value">8,5 м</td>
-                  <td class="promo__value">5 кг</td>
-                  <td class="promo__value">Карбон</td>
-                </tr>
-                <tr>
-                  <td class="promo__property">Длина палки</td>
-                  <td class="promo__property">Вес палки</td>
-                  <td class="promo__property">Материал</td>
-                </tr>
-              </table>
+              <div class="promo-wrap"></div>
+              <div class="promo__number-wrap">
+                <p class="promo__number">01</p>
+              </div>
+              <div class="description-wrap">
+                <h3 class="title promo__title">Делай селфи,<br>как Бен Стиллер!</h3>
+                <p class="promo__text">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <div class="promo__control-wrap">
+                  <a href="" class="link navigation__link promo__link">подробнее</a>
+                  <div class="promo__button-wrap">
+                    <button type="button" class="promo__button"></button>
+                    <button type="button" class="promo__button"></button>
+                    <button type="button" class="promo__button"></button>
+                  </div>
+                </div>
+                <div class="promo__description">
+                  <p class="promo__description-text promo__value">8,5 м</p>
+                  <p class="promo__description-text promo__value">5 кг</p>
+                  <p class="promo__description-text promo__value">Карбон</p>
+                  <p class="promo__description-text promo__property">Длина палки</p>
+                  <p class="promo__description-text promo__property">Вес палки</p>
+                  <p class="promo__description-text promo__property">Материал</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="promo__slide"></div>
           <div class="promo__slide"></div>
-          <div class="promo__button-wrap">
-            <button type="button" class="promo__button"></button>
-            <button type="button" class="promo__button"></button>
-            <button type="button" class="promo__button"></button>
-          </div>
         </div>
       </section>
 
       <section class="section category">
         <h2 class="content__title">Популярные разделы</h2>
-        <div class="container">
+        <div class="container category-container">
           <ul class="list category__list">
             <li class="list__item category__item">
               <div class="category__item-wrap">
@@ -152,20 +155,23 @@
       <section class="section service">
         <h2 class="content__title">Сервис</h2>
         <div class="container secvice__container">
-          <ul class="list service__list">
-            <li class="list__item service__item">
-              <button type="button" class="service__button">доставка</button>
-            </li>
-            <li class="list__item service__item">
-              <button type="button" class="service__button">гарантия</button>
-            </li>
-            <li class="list__item service__item">
-              <button type="button" class="service__button">кредит</button>
-            </li>
-          </ul>
+          <div class="service__list-wrap">
+            <ul class="list service__list">
+              <li class="list__item service__item">
+                <button type="button" class="service__button">доставка</button>
+              </li>
+              <li class="list__item service__item">
+                <button type="button" class="service__button">гарантия</button>
+              </li>
+              <li class="list__item service__item">
+                <button type="button" class="service__button">кредит</button>
+              </li>
+            </ul>
+          </div>
           <div class="service__description">
             <h3 class="title service__title">Доставка</h3>
             <p class="service__text">Мы с удовольствием доставим ваш товар прямо к вашему<br>подъезду совершенно бесплатно! Ведь мы неплохо<br>заработаем, поднимая его на ваш этаж.</p>
+            <div class="service__wrap"></div>
           </div>
           <div class="service__description"></div>
           <div class="service__description"></div>
@@ -202,10 +208,11 @@
 
       <section class="section common-info">
         <div class="container common-info__container">
-          <div class="about-us">
-            <h2 class="title about-us__title">О нас</h2>
-            <p class="about-us__text">Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
-            <p class="about-us__text">Мы можем доставить ваш товар в самые отдаленные точки<br>России! DEVICE работает со многими транспортными компаниями:</p>
+          <div class="about-us common-info__wrap">
+            <div class="common-wrap"></div>
+            <h2 class="title common-info__title">О нас</h2>
+            <p class="common-info__text">Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
+            <p class="common-info__text">Мы можем доставить ваш товар в самые отдаленные точки<br>России! DEVICE работает со многими транспортными компаниями:</p>
             <ul class="list about-us__list">
               <li class="about-us__item">
                 <p class="about-us__transport">Деловые линии</p>
@@ -217,13 +224,14 @@
                 <p class="about-us__transport">ЖелДорЭкспедиция</p>
               </li>
             </ul>
-            <a href="" class="link navigation__link about-us__link">подробнее о нас</a>
+            <a href="" class="link navigation__link common-info__link about-us__link">подробнее о нас</a>
           </div>
-          <div class="contacts">
-            <h2 class="contacs__title">Контакты</h2>
-            <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
+          <div class="contacts common-info__wrap">
+            <div class="common-wrap"></div>
+            <h2 class="title common-info__title">Контакты</h2>
+            <p class="common-info__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
             <img class="img contacts__img" src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
-            <a href="" class="link navigation__link contacts__link">напишите нам</a>
+            <a href="" class="link navigation__link common-info__link contacts__link">напишите нам</a>
           </div>
         </div>
       </section>
@@ -232,21 +240,22 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer__column">
-          <a href="index.html" class="main__link footer__logo">
-            <img class="img" src="img/logo-bottom.svg" width="163" height="35" alt="Возврат на главную страницу">
+          <a href="index.html" class="main__link">
+            <img class="img footer__logo" src="img/logo-bottom.svg" width="163" height="35" alt="Возврат на главную страницу">
           </a>
           <p class="address">г. Москва, ул. Строителей, 15</p>
+          <div class="footer-wrap"></div>
         </div>
         <div class="footer__column">
           <nav class="navigation footer__navigation">
             <ul class="list navigation__list footer__list">
-              <li class="list__item navigation__item footer__item">
+              <li class="list__item footer__item">
                 <a href="" class="link main__link navigation__link footer__link">доставка</a>
               </li>
-              <li class="list__item navigation__item footer__item">
+              <li class="list__item footer__item">
                 <a href="" class="link main__link navigation__link footer__link">гарантия</a>
               </li>
-              <li class="list__item navigation__item footer__item">
+              <li class="list__item footer__item">
                 <a href="" class="link main__link navigation__link footer__link">контакты</a>
               </li>
             </ul>
@@ -277,9 +286,9 @@
             <a href="" class="link footer-control__link footer__link">Сравнить</a>
             <a href="" class="link footer-control__link footer__link">Корзина</a>
           </div>
-          <p class="phone">Тел.: +7 (495) 495-95-95</p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="main__link footer__academy-logo">
-            <img class="img" src="img/academy-logo.svg" width="27" height="34" alt="Перейти на сайт академии">
+          <a href="tel:+74954959595" class="link footer__link footer__phone-link">Тел.: +7 (495) 495-95-95</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="main__link">
+            <img class="img footer__academy-logo" src="img/academy-logo.svg" width="27" height="34" alt="Перейти на сайт академии">
           </a>
         </div>
       </div>
