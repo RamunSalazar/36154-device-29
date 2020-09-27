@@ -3,14 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      function display__over() {
+        document.querySelector('.header__catalog-wrap').style.display='grid';
+      }
+      function display__out() {
+        document.querySelector('.header__catalog-wrap').style.display='none';
+      }
+    </script>
   </head>
   <body class="page__body">
 
     <header class="header">
       <div class="container header-container">
         <div class="header__logo-wrap">
-          <a href="index.html" class="main__link header__logo">
+          <a href="index.html" class="link main__link">
             <img class="img" src="img/logo.svg" width="163" height="35" alt="Перейти на главную страницу магазина">
           </a>
         </div>
@@ -25,9 +34,9 @@
           </div>
         </div>
         <div class="header__link-wrap">
-          <a href="catalog.html" class="link main__link navigation__link">каталог товаров</a>
-          <nav class="navigation header__navigation">
-            <ul class="list navigation__list header__list">
+          <a href="catalog.html" class="link main__link navigation__link catalog-link" onmouseover="display__over()">каталог товаров</a>
+          <nav>
+            <ul class="list navigation__list">
               <li class="list__item header__item">
                 <a href="" class="link main__link navigation__link">доставка</a>
               </li>
@@ -39,21 +48,34 @@
               </li>
             </ul>
           </nav>
+          <div  class="header__catalog-wrap" onmouseover="display__over()" onmouseout="display__out()">
+            <div class="header__catalog-row">
+              <a href="" class="link main__link header__catalog-link">Виртуальная реальность</a>
+              <a href="" class="link main__link header__catalog-link">Фитнес-браслеты</a>
+              <a href="" class="link main__link header__catalog-link">Квадрокоптер</a>
+            </div>
+            <div class="header__catalog-row">
+              <a href="catalog.html" class="link main__link header__catalog-link">Моноподы для селфи</a>
+              <a href="" class="link main__link header__catalog-link">Умные часы</a>
+            </div>
+            <div class="header__catalog-row">
+              <a href="" class="link main__link header__catalog-link">Экшн-камеры</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
     <main class="content">
       <h1 class="content__title">Магазин Девайс</h1>
-      <section class="section promo">
-        <div class="container promo-container">
+      <section class="promo">
+        <div class="container">
           <h2 class="content__title">Слайдер с промо товарами</h2>
           <div class="promo__slide">
             <div class="promo__img-wrap">
               <img class="img" src="img/silfie-stick.png" width="384" height="486" alt="Палка для селфи">
             </div>
             <div class="promo__description-wrap">
-              <div class="promo-wrap"></div>
               <div class="promo__number-wrap">
                 <p class="promo__number">01</p>
               </div>
@@ -88,31 +110,31 @@
         <h2 class="content__title">Популярные разделы</h2>
         <div class="container category-container">
           <ul class="list category__list">
-            <li class="list__item category__item">
+            <li class="list__item">
               <div class="category__item-wrap">
                 <a href="" class="link category__link">
                   <div class="category__img-wrap">
-                    <img class="img" src="img/virtual-reality.svg" width="97" height="55" alt="Переход в раздел каталога Виртуальная реальность">
+                    <img class="img category__img" src="img/virtual-reality.svg" width="97" height="55" alt="Переход в раздел каталога Виртуальная реальность">
                   </div>
                   <h3 class="title category__title">Виртуальная<br>реальность</h3>
                 </a>
               </div>
             </li>
-            <li class="list__item category__item">
+            <li class="list__item">
               <div class="category__item-wrap">
-                <a href="" class="link category__link">
+                <a href="catalog.html" class="link category__link">
                   <div class="category__img-wrap">
-                    <img class="img" src="img/silfie-monopods.svg" width="86" height="117" alt="Переход в раздел каталога Моноподы для селфи">
+                    <img class="img category__img" src="img/silfie-monopods.svg" width="86" height="117" alt="Переход в раздел каталога Моноподы для селфи">
                   </div>
                   <h3 class="title category__title">Моноподы для&nbsp;селфи</h3>
                 </a>
               </div>
             </li>
-            <li class="list__item category__item">
+            <li class="list__item">
               <div class="category__item-wrap">
                 <a href="" class="link category__link">
                   <div class="category__img-wrap">
-                    <img class="img" src="img/action-camera.svg" width="71" height="87" alt="Переход в раздел каталога Экшн-камеры">
+                    <img class="img category__img" src="img/action-camera.svg" width="71" height="87" alt="Переход в раздел каталога Экшн-камеры">
                   </div>
                   <h3 class="title category__title">Экшн-камеры</h3>
                 </a>
@@ -122,27 +144,27 @@
               <div class="category__item-wrap">
                 <a href="" class="link category__link">
                   <div class="category__img-wrap">
-                    <img class="img" src="img/fitness-bracelets.svg" width="107" height="61" alt="Переход в раздел каталога Фитнес-браслеты">
+                    <img class="img category__img" src="img/fitness-bracelets.svg" width="107" height="61" alt="Переход в раздел каталога Фитнес-браслеты">
                   </div>
                   <h3 class="title category__title">Фитнес-браслеты</h3>
                 </a>
               </div>
             </li>
-            <li class="list__item category__item">
+            <li class="list__item">
               <div class="category__item-wrap">
                 <a href="" class="link category__link">
                   <div class="category__img-wrap">
-                    <img class="img" src="img/smartwatch.svg" width="56" height="98" alt="Переход в раздел каталога Умные часы">
+                    <img class="img category__img" src="img/smartwatch.svg" width="56" height="98" alt="Переход в раздел каталога Умные часы">
                   </div>
                   <h3 class="title category__title">Умные часы</h3>
                 </a>
               </div>
             </li>
-            <li class="list__item category__item">
+            <li class="list__item">
               <div class="category__item-wrap">
                 <a href="" class="link category__link">
                   <div class="category__img-wrap">
-                    <img class="img" src="img/quadcopter.svg" width="132" height="69" alt="Переход в раздел каталога Квадрокоптеры">
+                    <img class="img category__img" src="img/quadcopter.svg" width="132" height="69" alt="Переход в раздел каталога Квадрокоптеры">
                   </div>
                   <h3 class="title category__title">Квадрокоптеры</h3>
                 </a>
@@ -152,7 +174,7 @@
         </div>
       </section>
 
-      <section class="section service">
+      <section class="service">
         <h2 class="content__title">Сервис</h2>
         <div class="container secvice__container">
           <div class="service__list-wrap">
@@ -178,38 +200,37 @@
         </div>
       </section>
 
-      <section class="section partner">
+      <section>
         <h2 class="content__title">Логотипы партнеров</h2>
         <div class="container partner-container">
           <ul class="list partner__list">
-            <li class="list__item partner__item">
-              <a href="" class="partner__link">
-                <img class="img" src="img/dji-logo.png" width="260" height="100" alt="Перейти на сайт dji">
+            <li class="list__item">
+              <a href="" class="link">
+                <img class="img" src="img/dji-logo.png" width="260" height="100" alt="Перейти на сайт dji" onmouseover="this.src='img/dji-color.png'" onmouseout="this.src='img/dji-logo.png'">
               </a>
             </li>
-            <li class="list__item partner__item">
-              <a href="" class="partner__link">
-                <img class="img" src="img/adgets-logo.png" width="260" height="100" alt="Перейти на сайт adgets">
+            <li class="list__item">
+              <a href="" class="link">
+                <img class="img" src="img/adgets-logo.png" width="260" height="100" alt="Перейти на сайт adgets" onmouseover="this.src='img/adgets-color.png'" onmouseout="this.src='img/adgets-logo.png'">
               </a>
             </li>
-            <li class="list__item partner__item">
-              <a href="" class="partner__link">
-                <img class="img" src="img/gopro-logo.png" width="260" height="100" alt="Перейти на сайт gopro">
+            <li class="list__item">
+              <a href="" class="link">
+                <img class="img" src="img/gopro-logo.png" width="260" height="100" alt="Перейти на сайт gopro" onmouseover="this.src='img/gopro-color.png'" onmouseout="this.src='img/gopro-logo.png'">
               </a>
             </li>
-            <li class="list__item partner__item">
-              <a href="" class="partner__link">
-                <img class="img" src="img/vive-logo.png" width="260" height="100" alt="Перейти на сайт vive">
+            <li class="list__item">
+              <a href="" class="link">
+                <img class="img" src="img/vive-logo.png" width="260" height="100" alt="Перейти на сайт vive" onmouseover="this.src='img/vive-color.png'" onmouseout="this.src='img/vive-logo.png'">
               </a>
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="section common-info">
+      <section class="common-info">
         <div class="container common-info__container">
-          <div class="about-us common-info__wrap">
-            <div class="common-wrap"></div>
+          <div class="common-info__wrap">
             <h2 class="title common-info__title">О нас</h2>
             <p class="common-info__text">Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
             <p class="common-info__text">Мы можем доставить ваш товар в самые отдаленные точки<br>России! DEVICE работает со многими транспортными компаниями:</p>
@@ -224,14 +245,13 @@
                 <p class="about-us__transport">ЖелДорЭкспедиция</p>
               </li>
             </ul>
-            <a href="" class="link navigation__link common-info__link about-us__link">подробнее о нас</a>
+            <a href="" class="link navigation__link common-info__link">подробнее о нас</a>
           </div>
-          <div class="contacts common-info__wrap">
-            <div class="common-wrap"></div>
+          <div class="common-info__wrap">
             <h2 class="title common-info__title">Контакты</h2>
             <p class="common-info__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
             <img class="img contacts__img" src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
-            <a href="" class="link navigation__link common-info__link contacts__link">напишите нам</a>
+            <a href="" class="link navigation__link common-info__link">напишите нам</a>
           </div>
         </div>
       </section>
@@ -240,15 +260,14 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer__column">
-          <a href="index.html" class="main__link">
+          <a href="index.html" class="link main__link">
             <img class="img footer__logo" src="img/logo-bottom.svg" width="163" height="35" alt="Возврат на главную страницу">
           </a>
           <p class="address">г. Москва, ул. Строителей, 15</p>
-          <div class="footer-wrap"></div>
         </div>
         <div class="footer__column">
-          <nav class="navigation footer__navigation">
-            <ul class="list navigation__list footer__list">
+          <nav class="footer__navigation">
+            <ul class="list navigation__list">
               <li class="list__item footer__item">
                 <a href="" class="link main__link navigation__link footer__link">доставка</a>
               </li>

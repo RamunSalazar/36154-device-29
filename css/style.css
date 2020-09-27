@@ -58,6 +58,8 @@
 .link {
   text-decoration: none;
   color: var(--basic-black);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .list {
@@ -102,23 +104,25 @@
 }
 /*----------HEADER---------------------------------------------------------------------------------------*/
 .header {
-  height: 186px;
-  margin-bottom: 35px;
+  min-height: 300px;
+  margin-top: 40px;
+}
+
+.header-catalog {
+  min-height: 186px;
 }
 
 .header-container {
   width: 1040px;
   padding: 0 60px;
-  height: 186px;
   background-color: var(--special-yellow-light);
   display: grid;
   grid-template-rows: repeat(3, min-content);
-  margin-top: 40px;
 }
 
 .header__logo-wrap {
   margin-top: -20px;
-  margin-bottom: 29px;
+  margin-bottom: 25px;
 }
 
 .header-control {
@@ -131,7 +135,11 @@
 
 .header__control-wrap,
 .header__navigation {
-  width: 500px;
+  min-width: 500px;
+}
+
+.header__link-wrap {
+  padding-bottom: 164px;
 }
 
 .header-control,
@@ -185,14 +193,33 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-/*----------PROMO---------------------------------------------------------------------------------------*/
-.promo {
-  margin-bottom: 116px;
+
+.header__catalog-wrap {
+  position: absolute;
+  width: 1160px;
+  min-height: 152px;
+  background-color: var(--special-yellow-light);
+  margin-left: -60px;
+  top: 190px;
+  display: none;
+  z-index: 1;
 }
 
-.promo-container {
-  background: linear-gradient(to bottom, var(--special-yellow-light) 114px, var(--basic-white) 114px, var(--basic-white) 100%);
-  height: 486px;
+.header__catalog-row {
+  padding-left: 60px;
+  display: grid;
+  grid-template-columns: 179px 125px 104px;
+  grid-column-gap: 61px;
+}
+
+.header__catalog-row:first-child {
+  padding-top: 20px;
+}
+/*----------PROMO---------------------------------------------------------------------------------------*/
+.promo {
+  margin-top: -130px;
+  min-height: 486px;
+  margin-bottom: 21px;
 }
 
 .promo__slide {
@@ -202,22 +229,22 @@
 
 .promo__img-wrap {
   margin-left: 89px;
-  height: 486px;
+  min-height: 486px;
 }
-
 
 .promo__description-wrap {
   width: 500px;
-  height: 486px;
   margin-left: 60px;
+  margin-top: 22px;
 }
 
-.promo-wrap {
+.promo__description-wrap::before {
+  content: "";
   width: 100px;
   height: 7px;
   background-color: var(--basic-white);
-  position: relative;
-  top: 15px;
+  position: absolute;
+  margin-top: 10px;
 }
 
 .promo__number-wrap {
@@ -232,14 +259,14 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  top: -97px;
+  top: -99px;
 }
 
 .promo__control-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 62px;
+  margin-bottom: 60px;
 }
 
 .promo__number {
@@ -260,7 +287,7 @@
 
 .promo__text {
   margin-top: 0;
-  margin-bottom: 62px;
+  margin-bottom: 60px;
 }
 
 .promo__description {
@@ -293,6 +320,7 @@
 
 .promo__button-wrap {
   display: flex;
+  margin-right: 28px;
 }
 
 .promo__button {
@@ -300,7 +328,7 @@
   height: 12px;
   border-radius: 50%;
   border: 1px solid var(--basic-black);
-  box-sizing: border-box;
+  background-color: var(--basic-white);
   outline: none;
   margin-left: 18px;
 }
@@ -322,6 +350,15 @@
   width: 160px;
 }
 
+.category__link:hover > .category__img-wrap {
+  background-color: var(--special-yellow-dark);
+}
+
+.category__link:active > .category__title,
+.category__link:active > .category__img-wrap > .category__img {
+  opacity: 0.3;
+}
+
 .category__img-wrap {
   width: 160px;
   height: 160px;
@@ -338,7 +375,7 @@
   margin-top: 38px;
 }
 
-.category__item:nth-child(4) .category__title{
+.category__item .category__title{
   letter-spacing: 0;
 }
 /*----------SERVICE---------------------------------------------------------------------------------------*/
@@ -419,10 +456,12 @@
   flex-direction: column;
 }
 
-.common-wrap {
+.common-info__wrap::before {
+  content: "";
   width: 80px;
   height: 7px;
   background-color: var(--basic-black);
+  position: relative;
   margin-bottom: 50px;
 }
 
@@ -439,7 +478,7 @@
   margin-bottom: 40px;
 }
 
-.common-info__text ~ .common-info__text {
+.common-info__text + .common-info__text {
   margin-bottom: 63px;
 }
 
@@ -487,10 +526,12 @@
   margin-bottom: 80px;
 }
 
-.footer-wrap {
+.footer__column:first-child::after {
+  content: "";
   width: 80px;
   height: 7px;
   background-color: var(--special-yellow-dark);
+  position: absolute;
 }
 
 .footer__column:nth-child(2) {
