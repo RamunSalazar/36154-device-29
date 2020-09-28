@@ -3,43 +3,59 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог - Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.js"></script>
   </head>
   <body class="page__body">
 
-    <header class="header">
+    <header class="header-catalog">
       <div class="container header-container">
         <div class="header__logo-wrap">
-          <a href="index.html" class="main__link header__logo">
+          <a href="index.html" class="link main__link">
             <img class="img" src="img/logo.svg" width="163" height="35" alt="Перейти на главную страницу магазина">
           </a>
         </div>
         <div class="header-control">
           <div class="header__search-form">
-            <!-- Поиска по сайту -->
+            <p>Поиска по сайту</p>
           </div>
           <div class="header__control-wrap">
-            <a href="" class="link main__link header-control__link">Имя пользователя</a>
-            <button type="button" class="catalog__button header-control__button">Выйти</button>
-            <a href="" class="link main__link header-control__link">Сравнить</a>
-            <a href="" class="link main__link header-control__link">Корзина</a>
+            <a href="" class="link main__link header-catalog__link">Имя пользователя</a>
+            <button type="button" class="catalog__button header-catalog__button">Выйти</button>
+            <a href="" class="link main__link header-catalog__link">Сравнить</a>
+            <a href="" class="link main__link header-catalog__link">Корзина</a>
           </div>
         </div>
-        <div class="header__link-wrap">
-          <a href="catalog.html" class="link main__link navigation__link">каталог товаров</a>
-          <nav class="navigation header__navigation">
-            <ul class="list navigation__list header__list">
-              <li class="list__item navigation__item header__item">
+        <div class="catalog__link-wrap">
+          <a href="catalog.html" class="link main__link navigation__link catalog-link" onmouseover="display__over()">каталог товаров</a>
+          <nav>
+            <ul class="list navigation__list">
+              <li class="list__item header__item">
                 <a href="" class="link main__link navigation__link">доставка</a>
               </li>
-              <li class="list__item navigation__item header__item">
+              <li class="list__item header__item">
                 <a href="" class="link main__link navigation__link">гарантия</a>
               </li>
-              <li class="list__item navigation__item header__item">
+              <li class="list__item header__item">
                 <a href="" class="link main__link navigation__link">контакты</a>
               </li>
             </ul>
           </nav>
+          <div  class="header__catalog-wrap" onmouseover="display__over()" onmouseout="display__out()">
+            <div class="header__catalog-row">
+              <a href="" class="link main__link header__catalog-link">Виртуальная реальность</a>
+              <a href="" class="link main__link header__catalog-link">Фитнес-браслеты</a>
+              <a href="" class="link main__link header__catalog-link">Квадрокоптер</a>
+            </div>
+            <div class="header__catalog-row">
+              <a href="catalog.html" class="link main__link header__catalog-link">Моноподы для селфи</a>
+              <a href="" class="link main__link header__catalog-link">Умные часы</a>
+            </div>
+            <div class="header__catalog-row">
+              <a href="" class="link main__link header__catalog-link">Экшн-камеры</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -47,11 +63,13 @@
     <main class="content">
       <h1 class="content__title">Каталог</h1>
 
-      <div class="container catalog-control">
+      <div class="catalog__control-container catalog-control">
         <h2 class="title catalog-control__title">Моноподы для селфи</h2>
-        <a href="" class="link catalog-control__link">Главная</a>
-        <a href="" class="link catalog-control__link">Каталог товаров</a>
-        <a href="" class="link catalog-control__link">Моноподы для селфи</a>
+        <div class="link-wrap">
+          <a href="" class="link catalog-control__link">Главная</a>
+          <a href="" class="link catalog-control__link">Каталог товаров</a>
+          <a href="" class="link catalog-control__link">Моноподы для селфи</a>
+        </div>
       </div>
 
       <section class="section catalog">
@@ -93,7 +111,7 @@
                   <figure class="cart">
                     <img class="img cart__img" src="img/amateur-selfie-stick.png" width="360" height="380" alt="Любительская селфи-палка">
                     <figcaption class="cart__title">
-                      <a href="" class="link cart__link">Любительская<br> селфи-палка</a> 500 руб.
+                      <a href="" class="link cart__link">Любительская селфи-палка</a> 500 руб.
                     </figcaption>
                   </figure>
                 </li>
@@ -101,7 +119,7 @@
                   <figure class="cart">
                     <img class="img cart__img" src="img/professional-selfie-stick.png" width="360" height="380" alt="Профессиональная селфи-палка">
                     <figcaption class="cart__title">
-                        <a href="" class="link cart__link">Профессиональная<br> селфи-палка</a> 1 500 руб.
+                        <a href="" class="link cart__link">Профессиональная селфи&nbsp;-&nbsp;палка</a> 1 500 руб.
                     </figcaption>
                   </figure>
                 </li>
@@ -109,21 +127,22 @@
                   <figure class="cart">
                     <img class="img cart__img" src="img/unsinkable-selfie-stick.png" width="360" height="380" alt="Непотопляемая селфи-палка">
                     <figcaption class="cart__title">
-                      <a href="" class="link cart__link">Непотопляемая<br> селфи-палка</a> 2 500 руб.
-                    </figcaption>
+                      <a href="" class="link cart__link">Непотопляемая селфи-палка</a> 2 500 руб.
                   </figure>
                 </li>
                 <li class="list__item catalog-cart__item">
                   <figure class="cart">
                     <img class="img cart__img" src="img/selfie-stick«follow-me».png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                     <figcaption class="cart__title">
-                      <a href="" class="link cart__link">Селфи-палка<br> «Следуй за мной»</a> 4 900 руб.
+                      <a href="" class="link cart__link">Селфи-палка «Следуй за мной»</a> 4 900 руб.
                     </figcaption>
                   </figure>
                 </li>
               </ul>
               <div class="switch-page">
-                <button type="button" class="switch-page__control switch-page__button back__button">назад</button>
+                <button type="button" class="switch-page__control switch-page__button left__button">
+                  <span class="button__text">назад</span>
+                </button>
                 <ul class="list switch-page__list">
                   <li class="list__item switch-page__item">
                     <a href="" class="link switch-page__control switch-page__link">1</a>
@@ -135,7 +154,9 @@
                     <a href="" class="link switch-page__control switch-page__link">3</a>
                   </li>
                 </ul>
-                <button type="button" class="switch-page__control switch-page__button forward__button">вперед</button>
+                <button type="button" class="switch-page__control switch-page__button right__button">
+                  <span class="button__text">вперед</span>
+                </button>
               </div>
             </div>
           </div>
@@ -146,21 +167,21 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer__column">
-          <a href="index.html" class="main__link footer__logo">
-            <img class="img" src="img/logo-bottom.svg" width="163" height="35" alt="Возврат на главную страницу">
+          <a href="index.html" class="link main__link">
+            <img class="img footer__logo" src="img/logo-bottom.svg" width="163" height="35" alt="Возврат на главную страницу">
           </a>
           <p class="address">г. Москва, ул. Строителей, 15</p>
         </div>
         <div class="footer__column">
-          <nav class="navigation footer__navigation">
-            <ul class="list navigation__list footer__list">
-              <li class="list__item navigation__item footer__item">
+          <nav class="footer__navigation">
+            <ul class="list navigation__list">
+              <li class="list__item footer__item">
                 <a href="" class="link main__link navigation__link footer__link">доставка</a>
               </li>
-              <li class="list__item navigation__item footer__item">
+              <li class="list__item footer__item">
                 <a href="" class="link main__link navigation__link footer__link">гарантия</a>
               </li>
-              <li class="list__item navigation__item footer__item">
+              <li class="list__item footer__item">
                 <a href="" class="link main__link navigation__link footer__link">контакты</a>
               </li>
             </ul>
@@ -186,15 +207,15 @@
           </div>
         </div>
         <div class="footer__column">
-          <div class="footer-control">
-            <a href="" class="link footer-control__link footer__link">Войти</a>
-            <button type="button" class="catalog__button footer-control__button">Выйти</button>
-            <a href="" class="link footer-control__link footer__link">Сравнить</a>
-            <a href="" class="link footer-control__link footer__link">Корзина</a>
+          <div class="footer-catalog__control">
+            <a href="" class="link footer-catalog__link footer__link">Имя пользователя</a>
+            <button type="button" class="catalog__button footer-catalog__button">Выйти</button>
+            <a href="" class="link footer-catalog__link footer__link">Сравнить</a>
+            <a href="" class="link footer-catalog__link footer__link">Корзина</a>
           </div>
-          <p class="phone">Тел.: +7 (495) 495-95-95</p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="main__link footer__academy-logo">
-            <img class="img" src="img/academy-logo.svg" width="27" height="34" alt="Перейти на сайт академии">
+          <a href="tel:+74954959595" class="link footer__link footer__phone-link">Тел.: +7 (495) 495-95-95</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="main__link">
+            <img class="img footer__academy-logo" src="img/academy-logo.svg" width="27" height="34" alt="Перейти на сайт академии">
           </a>
         </div>
       </div>
