@@ -1540,6 +1540,16 @@
   background: url('../img/tick.svg') no-repeat 0 0;
 }
 
+.color__text:hover,
+.bluetooth__text:hover {
+  opacity: 0.6;
+}
+
+.color__text:active,
+.bluetooth__text:active {
+  opacity: 0.3;
+}
+
 .bluetooth__radio + .bluetooth__text::before {
   content: "";
   position: absolute;
@@ -1561,6 +1571,7 @@
   background-color: var(--basic-black);
   border-radius: 50%;
 }
+
 .filter__button {
   font-family: Gilroy;
   font-style: normal;
@@ -1594,12 +1605,37 @@
   background-image: none;
   background-color: var(--special-yellow-dark);
 }
+
 .filter__button:active .filter__button-text {
   opacity: 0.3;
+}
+
+.new {
+  width: 58px;
+  height: 58px;
+  background-color: transparent;
+  border: 2px solid var(--basic-black);
+  border-radius: 50%;
+  opacity: 0.3;
+  position: absolute;
+  top: 30px;
+  right: 27px;
+}
+.new__text {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  position: relative;
+  top: 17px;
+  left: 16px;
 }
 /*----------CATALOG-CART---------------------------------------------------------------------------------------*/
 .cart__img {
   margin-bottom: 27px;
+  opacity: 1;
 }
 
 .cart__title {
@@ -1659,6 +1695,71 @@
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.05em;
+}
+.catalog-cart__item {
+  position: relative;
+}
+
+.cart__button {
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  top: 0;
+}
+
+.button-bascet {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 16px,
+    var(--special-yellow-dark) 16px,
+    var(--special-yellow-dark) 24px,
+    transparent 24px
+    );
+  width: 200px;
+  height: 40px;
+  top: 170px;
+  left: 78px;
+  visibility: hidden;
+}
+
+.button-bascet:focus,
+.button-bascet:hover {
+  background-image: none;
+  background-color: var(--special-yellow-dark);
+}
+
+.button-bascet:active .button-bascet__text {
+  opacity: 0.3;
+}
+
+.button-compare {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  top: 223px;
+  left: 88px;
+  visibility: hidden;
+}
+
+.button-compare:hover,
+.button-compare:focus {
+  opacity: 1;
+}
+
+.button-compare:active {
+  opacity: 0.2;
 }
 
 .switch-page__control {
