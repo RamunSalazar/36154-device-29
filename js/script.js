@@ -1,8 +1,8 @@
 function display__over() {
-  document.querySelector('.header__catalog-wrap').style.display='grid';
+  document.querySelector('.header__catalog-wrap').style.visibility='visible';
 }
 function display__out() {
-  document.querySelector('.header__catalog-wrap').style.display='none';
+  document.querySelector('.header__catalog-wrap').style.visibility='hidden';
 }
 function promo_click_button(elem) {
   var arr_btn = document.querySelectorAll('.promo__button');
