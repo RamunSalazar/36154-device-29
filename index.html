@@ -325,7 +325,7 @@
           <div class="common-info__wrap">
             <h2 class="title common-info__title">Контакты</h2>
             <p class="common-info__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
-            <img class="img contacts__img" src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
+            <img class="img contacts__img" src="img/map.png" width="560" height="222" onclick="modal_map_display_on()" alt="Карта офиса по адресу улица Строителей, 15">
             <button type="button" class="write-us__button" onclick="modal_feedback_display_on()">
               <span class="common-info__button__text">напишите нам</span>
             </button>
@@ -401,7 +401,8 @@
 
     <section class="modal modal-map">
       <h2 class="visuality-hidden">Интерактивная карта</h2>
-
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473613!2d37.52742931604449!3d55.68703400452982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1601979622934!5m2!1sru!2sru" width="994" height="593" frameborder="0" style="border:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <button class="modal-close" type="button" aria-label="Закрыть" onclick="modal_map_close()"></button>
     </section>
 
     <section class="modal modal-feedback">

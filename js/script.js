@@ -38,3 +38,19 @@ function service_click_button(elem) {
   arr_desc[desc_index].classList.remove('service-hidden');
   arr_desc[desc_index].classList.add('service-visibility');
 }
+
+function modal_feedback_display_on() {
+  document.querySelector('.modal-feedback').style.display="block";
+}
+
+function modal_feedback_close() {
+  document.querySelector('.modal-feedback').style.display="none";
+}
+
+function modal_map_display_on() {
+  document.querySelector('.modal-map').style.display="block";
+}
+
+function modal_map_close() {
+  document.querySelector('.modal-map').style.display="none";
+}
