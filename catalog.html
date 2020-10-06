@@ -30,22 +30,22 @@
           <a href="" class="link header-catalog__link">Корзина</a>
         </div>
         <div class="catalog-wrap">
-          <a href="catalog.html" class="link catalog-link" onmouseover="display__over()">каталог товаров</a>
+          <a href="catalog.html" class="link catalog-link">каталог товаров</a>
           <svg class="img catalog-img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.7 6.9V9.1H9.10005V15.7H6.90005V9.1H0.300049V6.9H6.90005V0.300003H9.10005V6.9H15.7Z" fill="black" fill-opacity="0.3"/>
           </svg>
-          <div  class="header__catalog-wrap" onmouseover="display__over()" onmouseout="display__out()">
+          <div  class="header__catalog-wrap">
             <div class="header__catalog-row">
-              <a href="" class="link">Виртуальная реальность</a>
-              <a href="" class="link">Фитнес-браслеты</a>
-              <a href="" class="link">Квадрокоптер</a>
+              <a href="" class="link catalog__link">Виртуальная реальность</a>
+              <a href="" class="link catalog__link">Фитнес-браслеты</a>
+              <a href="" class="link catalog__link">Квадрокоптер</a>
             </div>
             <div class="header__catalog-row">
-              <a href="catalog.html" class="link">Моноподы для селфи</a>
-              <a href="" class="link">Умные часы</a>
+              <a href="catalog.html" class="link catalog__link">Моноподы для селфи</a>
+              <a href="" class="link catalog__link">Умные часы</a>
             </div>
             <div class="header__catalog-row">
-              <a href="" class="link">Экшн-камеры</a>
+              <a href="" class="link catalog__link">Экшн-камеры</a>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@
           <div class="filters">
             <h2 class="visuality-hidden">Фильтр товаров</h2>
             <div class="left-block">
-              <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+              <form class="filter" method="post" action="https://echo.htmlacademy.ru">
                   <fieldset class="filter__item">
                     <legend class="filter__title">Стоимость</legend>
                     <div class="range-filter">
@@ -183,15 +183,17 @@
               <ul class="list catalog-cart__list">
                 <li class="list__item catalog-cart__item">
                   <figure class="cart">
-                    <img class="img cart__img" src="img/amateur-selfie-stick.png" width="360" height="380" alt="Любительская селфи-палка" onmouseover="display_cart__over()" onmouseout="display_cart__out()">
+                    <img class="img cart__img" src="img/amateur-selfie-stick.png" width="360" height="380" alt="Любительская селфи-палка">
                     <figcaption class="cart__title">
                       <a href="" class="link cart__link">Любительская селфи-палка</a> 1 100 руб.
                     </figcaption>
                   </figure>
-                  <button type="buttun" class="cart__button button-bascet" onmouseover="display_cart__over()">
-                    <span class="button-bascet__text">в корзину</span>
-                  </button>
-                  <button type="buttun" class="cart__button button-compare" onmouseover="display_cart__over()">Добавить к сравнению</button>
+                  <div class="button-wrap">
+                    <button type="buttun" class="cart__button button-bascet">
+                      <span class="button-bascet__text">в корзину</span>
+                    </button>
+                    <button type="buttun" class="cart__button button-compare">Добавить к сравнению</button>
+                  </div>
                 </li>
                 <li class="list__item catalog-cart__item">
                   <figure class="cart">
@@ -200,13 +202,26 @@
                         <a href="" class="link cart__link">Профессиональная<br> селфи-палка</a> 1 500 руб.
                     </figcaption>
                   </figure>
+                  <div class="button-wrap">
+                    <button type="buttun" class="cart__button button-bascet">
+                      <span class="button-bascet__text">в корзину</span>
+                    </button>
+                    <button type="buttun" class="cart__button button-compare">Добавить к сравнению</button>
+                  </div>
                 </li>
                 <li class="list__item catalog-cart__item">
                   <figure class="cart">
                     <img class="img cart__img" src="img/unsinkable-selfie-stick.png" width="360" height="380" alt="Непотопляемая селфи-палка">
                     <figcaption class="cart__title">
                       <a href="" class="link cart__link">Непотопляемая<br> селфи-палка</a> 1 500 руб.
+                    </figcaption>
                   </figure>
+                  <div class="button-wrap">
+                    <button type="buttun" class="cart__button button-bascet">
+                      <span class="button-bascet__text">в корзину</span>
+                    </button>
+                    <button type="buttun" class="cart__button button-compare">Добавить к сравнению</button>
+                  </div>
                 </li>
                 <li class="list__item catalog-cart__item">
                   <figure class="cart">
@@ -215,6 +230,12 @@
                       <a href="" class="link cart__link">Селфи-палка <span class="cart__text">«Следуй за мной»</span></a> 1 900 руб.
                     </figcaption>
                   </figure>
+                  <div class="button-wrap">
+                    <button type="buttun" class="cart__button button-bascet">
+                      <span class="button-bascet__text">в корзину</span>
+                    </button>
+                    <button type="buttun" class="cart__button button-compare">Добавить к сравнению</button>
+                  </div>
                   <div class="new">
                     <span class="new__text">New</span>
                   </div>

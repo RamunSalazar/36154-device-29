@@ -29,22 +29,22 @@
           <a href="" class="link header-control__link">Корзина</a>
         </div>
         <div class="catalog-wrap">
-          <a href="catalog.html" class="link catalog-link" onmouseover="display__over()">каталог товаров</a>
+          <a href="catalog.html" class="link catalog-link">каталог товаров</a>
           <svg class="img catalog-img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.7 6.9V9.1H9.10005V15.7H6.90005V9.1H0.300049V6.9H6.90005V0.300003H9.10005V6.9H15.7Z" fill="black" fill-opacity="0.3"/>
           </svg>
-          <div  class="header__catalog-wrap" onmouseover="display__over()" onmouseout="display__out()">
+          <div  class="header__catalog-wrap">
             <div class="header__catalog-row">
-              <a href="" class="link">Виртуальная реальность</a>
-              <a href="" class="link">Фитнес-браслеты</a>
-              <a href="" class="link">Квадрокоптер</a>
+              <a href="" class="link catalog__link">Виртуальная реальность</a>
+              <a href="" class="link catalog__link">Фитнес-браслеты</a>
+              <a href="" class="link catalog__link">Квадрокоптер</a>
             </div>
             <div class="header__catalog-row">
-              <a href="catalog.html" class="link">Моноподы для селфи</a>
-              <a href="" class="link">Умные часы</a>
+              <a href="catalog.html" class="link catalog__link">Моноподы для селфи</a>
+              <a href="" class="link catalog__link">Умные часы</a>
             </div>
             <div class="header__catalog-row">
-              <a href="" class="link">Экшн-камеры</a>
+              <a href="" class="link catalog__link">Экшн-камеры</a>
             </div>
           </div>
         </div>
@@ -319,16 +319,16 @@
               </li>
             </ul>
             <a href="" class="link about-us__link common-info__link">
-              <span class="common-info__button-text">подробнее о нас</span>
+              <span class="common-info__button__text">подробнее о нас</span>
             </a>
           </div>
           <div class="common-info__wrap">
             <h2 class="title common-info__title">Контакты</h2>
             <p class="common-info__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
             <img class="img contacts__img" src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
-            <a href="" class="link write-us__link common-info__link">
-              <span class="common-info__button-text">напишите нам</span>
-            </a>
+            <button type="button" class="write-us__button" onclick="modal_feedback_display_on()">
+              <span class="common-info__button__text">напишите нам</span>
+            </button>
           </div>
         </div>
       </section>
@@ -399,19 +399,31 @@
       </div>
     </footer>
 
-    <section class="login-form">
-      <h2 class="visuality-hidden">Форма входа</h2>
-      <!-- Форма входа -->
-    </section>
-
-    <section class="map">
+    <section class="modal modal-map">
       <h2 class="visuality-hidden">Интерактивная карта</h2>
-      <!-- Интерактивная карта -->
+
     </section>
 
-    <section class="feedback">
+    <section class="modal modal-feedback">
       <h2 class="visuality-hidden">Обратная связь</h2>
-      <!-- Обратная связь -->
+      <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
+        <div class="wrap">
+          <label class="label" for="name">Ваше имя:</label><br>
+          <input class="form__element" type="text" id="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="wrap">
+          <label class="label" for="email">Ваш e-mail:</label><br>
+          <input class="form__element" type="email" id="email" placeholder="email@example.com">
+        </div>
+        <div class="wrap form__text-wrap">
+          <label class="label" for="text-letter">Текст письма:</label><br>
+          <textarea class="form__text" id="text-letter" placeholder="В свободной форме"></textarea>
+          <button class="form__button" type="button">
+            <span class="button__text">отправить</span>
+          </button>
+        </div>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть" onclick="modal_feedback_close()"></button>
     </section>
 
   </body>
