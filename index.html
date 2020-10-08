@@ -17,11 +17,13 @@
           </a>
         </div>
         <div class="header__search-form">
-          <label for="header__search" class="header__search-element"></label>
-          <input id="header__search" class="header__search-string" type="text" placeholder="Поиск по сайту">
-          <button class="header__search-button" type="button">
-            <span class="header__button-text">найти</span>
-          </button>
+          <form method="post" action="https://echo.htmlacademy.ru">
+            <label for="header__search" class="header__search-element"></label>
+            <input id="header__search" class="header__search-string" type="text" placeholder="Поиск по сайту">
+            <button class="header__search-button" type="button">
+              <span class="header__button-text">найти</span>
+            </button>
+          </form>
         </div>
         <div class="header__control-wrap">
           <a href="" class="link header-control__link">Войти</a>
@@ -84,6 +86,16 @@
                   Самая длинная палка для селфи доступна в нашем магазине.<br>
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                 </p>
+                <div class="promo__control-wrap">
+                  <a href="" class="link promo__link">
+                    <span class="promo__link-text">подробнее</span>
+                  </a>
+                  <div class="promo__button-wrap">
+                    <button type="button" class="promo__button promo-visibility" onclick="promo_click_button(this)"></button>
+                    <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
+                    <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
+                  </div>
+                </div>
                 <div class="promo__description">
                   <p class="promo__description-text promo__value">8,5 м</p>
                   <p class="promo__description-text promo__value">5 кг</p>
@@ -110,6 +122,16 @@
                   Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
                   не пропускать занятия и соблюдать диету.
                 </p>
+                <div class="promo__control-wrap">
+                  <a href="" class="link promo__link">
+                    <span class="promo__link-text">подробнее</span>
+                  </a>
+                  <div class="promo__button-wrap">
+                    <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
+                    <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
+                    <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
+                  </div>
+                </div>
                 <div class="promo__description">
                   <p class="promo__description-text promo__value">48 часов</p>
                   <p class="promo__description-text promo__property">Без подзарядки</p>
@@ -132,6 +154,16 @@
                   Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                   мощным лазером, замаскированным под стандартную камеру.
                 </p>
+                <div class="promo__control-wrap">
+                  <a href="" class="link promo__link">
+                    <span class="promo__link-text">подробнее</span>
+                  </a>
+                  <div class="promo__button-wrap">
+                    <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
+                    <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
+                    <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
+                  </div>
+                </div>
                 <div class="promo__description">
                   <p class="promo__description-text promo__value">800 м</p>
                   <p class="promo__description-text promo__value">50 м</p>
@@ -139,17 +171,6 @@
                   <p class="promo__description-text promo__property">Радиус поражения</p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="promo__control-wrap">
-            <a href="" class="link promo__link">
-              <span class="promo__link-text">подробнее</span>
-            </a>
-            <div class="promo__button-wrap">
-              <button type="button" class="promo__button promo-visibility" onclick="promo_click_button(this)"></button>
-              <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
-              <button type="button" class="promo__button" onclick="promo_click_button(this)"></button>
             </div>
           </div>
         </div>
@@ -247,7 +268,6 @@
                 подъезду совершенно бесплатно! Ведь мы неплохо<br>
                 заработаем, поднимая его на ваш этаж.
               </p>
-              <div class="service__wrap-1"></div>
             </div>
 
             <div class="service__description service-hidden">
@@ -257,7 +277,6 @@
                 не переживайте, мы выдадим вам новый.<br>
                 Товар, не дом, конечно же.
               </p>
-              <div class="service__wrap-2"></div>
             </div>
 
             <div class="service__description service-hidden">
@@ -267,7 +286,6 @@
                 подберут для вас наиболее выгодные<br>
                 условия кредита. Выгодные для нашего банка, разумеется.
               </p>
-              <div class="service__wrap-3"></div>
             </div>
           </div>
         </div>
@@ -399,33 +417,36 @@
       </div>
     </footer>
 
-    <section class="modal modal-map">
-      <h2 class="visuality-hidden">Интерактивная карта</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473613!2d37.52742931604449!3d55.68703400452982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1601979622934!5m2!1sru!2sru" width="994" height="593" frameborder="0" style="border:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      <button class="modal-close" type="button" aria-label="Закрыть" onclick="modal_map_close()"></button>
-    </section>
+    <div class="modal__map-wrap">
+      <div class="modal modal-map">
+        <h2 class="visuality-hidden">Интерактивная карта</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473613!2d37.52742931604449!3d55.68703400452982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1601979622934!5m2!1sru!2sru" width="994" height="593" frameborder="0" style="border:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <button class="modal-close" type="button" aria-label="Закрыть" onclick="modal_map_close()"></button>
+      </div>
+    </div>
 
-    <section class="modal modal-feedback">
-      <h2 class="visuality-hidden">Обратная связь</h2>
-      <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
-        <div class="wrap">
-          <label class="label" for="name">Ваше имя:</label><br>
-          <input class="form__element" type="text" id="name" placeholder="Имя Фамилия">
-        </div>
-        <div class="wrap">
-          <label class="label" for="email">Ваш e-mail:</label><br>
-          <input class="form__element" type="email" id="email" placeholder="email@example.com">
-        </div>
-        <div class="wrap form__text-wrap">
-          <label class="label" for="text-letter">Текст письма:</label><br>
-          <textarea class="form__text" id="text-letter" placeholder="В свободной форме"></textarea>
-          <button class="form__button" type="button">
-            <span class="button__text">отправить</span>
-          </button>
-        </div>
-      </form>
-      <button class="modal-close" type="button" aria-label="Закрыть" onclick="modal_feedback_close()"></button>
-    </section>
-
+    <div class="modal__feedback-wrap">
+      <div class="modal modal-feedback">
+        <h2 class="visuality-hidden">Обратная связь</h2>
+        <form class="feedback" method="post" action="https://echo.htmlacademy.ru">
+          <div class="wrap">
+            <label class="label" for="name">Ваше имя:</label><br>
+            <input class="form__element" type="text" id="name" placeholder="Имя Фамилия">
+          </div>
+          <div class="wrap">
+            <label class="label" for="email">Ваш e-mail:</label><br>
+            <input class="form__element" type="email" id="email" placeholder="email@example.com">
+          </div>
+          <div class="wrap">
+            <label class="label" for="text-letter">Текст письма:</label><br>
+            <textarea class="form__text" id="text-letter" placeholder="В свободной форме"></textarea>
+            <button class="form__button" type="button">
+              <span class="button__text">отправить</span>
+            </button>
+          </div>
+        </form>
+        <button class="modal-close" type="button" aria-label="Закрыть" onclick="modal_feedback_close()"></button>
+      </div>
+    </div>
   </body>
 </html>
