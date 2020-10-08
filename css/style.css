@@ -632,8 +632,9 @@
   flex-wrap: wrap;
 }
 
-.category__item-wrap {
+.category__link {
   width: 160px;
+  word-wrap: break-word;
 }
 
 .category__link:hover .category__img-wrap {
@@ -829,6 +830,10 @@
   line-height: 28px;
   letter-spacing: 0.1em;
   margin: 0;
+  margin-bottom: 10px;
+}
+.service__text:last-child {
+  margin-bottom: 60px;
 }
 
 .service__description:nth-child(2) .service__text{
