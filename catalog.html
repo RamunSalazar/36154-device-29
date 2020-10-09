@@ -17,11 +17,13 @@
           </a>
         </div>
         <div class="header__search-form">
-          <label for="header__search" class="header__search-element"></label>
-          <input id="header__search" class="header__search-string" type="text" placeholder="Поиск по сайту">
-          <button class="header__search-button" type="button">
-            <span class="header__button-text">найти</span>
-          </button>
+          <form class="header__form" method="post" action="https://echo.htmlacademy.ru">
+            <label for="header__search" class="header__search-element"></label>
+            <input id="header__search" class="header__search-string" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            <button class="header__search-button" type="submit">
+              <span class="header__button-text">найти</span>
+            </button>
+          </form>
         </div>
         <div class="header-catalog__control-wrap">
           <a href="" class="link header-catalog__link">Валентин Петухов</a>
@@ -35,18 +37,30 @@
             <path d="M15.7 6.9V9.1H9.10005V15.7H6.90005V9.1H0.300049V6.9H6.90005V0.300003H9.10005V6.9H15.7Z" fill="black" fill-opacity="0.3"/>
           </svg>
           <div  class="header__catalog-wrap">
-            <div class="header__catalog-row">
-              <a href="" class="link catalog__link">Виртуальная реальность</a>
-              <a href="" class="link catalog__link">Фитнес-браслеты</a>
-              <a href="" class="link catalog__link">Квадрокоптер</a>
-            </div>
-            <div class="header__catalog-row">
-              <a href="catalog.html" class="link catalog__link">Моноподы для селфи</a>
-              <a href="" class="link catalog__link">Умные часы</a>
-            </div>
-            <div class="header__catalog-row">
-              <a href="" class="link catalog__link">Экшн-камеры</a>
-            </div>
+            <ul class="list header__catalog-list">
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Виртуальная реальность</a>
+              </li>
+              <li class="list__item header__catalog-list__item">
+                <a href="catalog.html" class="link catalog__link">Моноподы для селфи</a>
+              </li>
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="list header__catalog-list">
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Фитнес-браслеты</a>
+              </li>
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="list header__catalog-list">
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Квадрокоптер</a>
+              </li>
+            </ul>
           </div>
         </div>
         <nav>
@@ -67,7 +81,6 @@
 
     <main>
       <h1 class="visuality-hidden">Каталог</h1>
-
       <div class="catalog__control-container catalog-control">
         <h2 class="title catalog-control__title">Моноподы для селфи</h2>
         <div class="link-wrap">
@@ -171,7 +184,7 @@
                       </li>
                     </ul>
                   </fieldset>
-                  <button type="button" class="filter__button">
+                  <button type="submit" class="filter__button">
                     <span class="filter__button-text">показать</span>
                   </button>
               </form>
@@ -194,6 +207,9 @@
                     </button>
                     <button type="buttun" class="cart__button button-compare">Добавить к сравнению</button>
                   </div>
+                  <div class="new">
+                    <span class="new__text">New</span>
+                  </div>
                 </li>
                 <li class="list__item catalog-cart__item">
                   <figure class="cart">
@@ -208,6 +224,9 @@
                     </button>
                     <button type="buttun" class="cart__button button-compare">Добавить к сравнению</button>
                   </div>
+                  <div class="new">
+                    <span class="new__text">New</span>
+                  </div>
                 </li>
                 <li class="list__item catalog-cart__item">
                   <figure class="cart">
@@ -221,6 +240,9 @@
                       <span class="button-bascet__text">в корзину</span>
                     </button>
                     <button type="buttun" class="cart__button button-compare">Добавить к сравнению</button>
+                  </div>
+                  <div class="new">
+                    <span class="new__text">New</span>
                   </div>
                 </li>
                 <li class="list__item catalog-cart__item">

@@ -17,10 +17,10 @@
           </a>
         </div>
         <div class="header__search-form">
-          <form method="post" action="https://echo.htmlacademy.ru">
+          <form class="header__form" method="post" action="https://echo.htmlacademy.ru">
             <label for="header__search" class="header__search-element"></label>
-            <input id="header__search" class="header__search-string" type="text" placeholder="Поиск по сайту">
-            <button class="header__search-button" type="button">
+            <input id="header__search" class="header__search-string" type="text" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            <button class="header__search-button" type="submit">
               <span class="header__button-text">найти</span>
             </button>
           </form>
@@ -36,18 +36,30 @@
             <path d="M15.7 6.9V9.1H9.10005V15.7H6.90005V9.1H0.300049V6.9H6.90005V0.300003H9.10005V6.9H15.7Z" fill="black" fill-opacity="0.3"/>
           </svg>
           <div  class="header__catalog-wrap">
-            <div class="header__catalog-row">
-              <a href="" class="link catalog__link">Виртуальная реальность</a>
-              <a href="" class="link catalog__link">Фитнес-браслеты</a>
-              <a href="" class="link catalog__link">Квадрокоптер</a>
-            </div>
-            <div class="header__catalog-row">
-              <a href="catalog.html" class="link catalog__link">Моноподы для селфи</a>
-              <a href="" class="link catalog__link">Умные часы</a>
-            </div>
-            <div class="header__catalog-row">
-              <a href="" class="link catalog__link">Экшн-камеры</a>
-            </div>
+            <ul class="list header__catalog-list">
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Виртуальная реальность</a>
+              </li>
+              <li class="list__item header__catalog-list__item">
+                <a href="catalog.html" class="link catalog__link">Моноподы для селфи</a>
+              </li>
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="list header__catalog-list">
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Фитнес-браслеты</a>
+              </li>
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="list header__catalog-list">
+              <li class="list__item header__catalog-list__item">
+                <a href="" class="link catalog__link">Квадрокоптер</a>
+              </li>
+            </ul>
           </div>
         </div>
         <nav>
@@ -250,7 +262,7 @@
           <div class="service__list-wrap">
             <ul class="list service__list">
               <li class="list__item service__item">
-                <button type="button" class="service__button" onclick="service_click_button(this)" autofocus>доставка</button>
+                <button type="button" class="service__button" onclick="service_click_button(this)">доставка</button>
               </li>
               <li class="list__item service__item">
                 <button type="button" class="service__button" onclick="service_click_button(this)">гарантия</button>
@@ -440,7 +452,7 @@
           <div class="wrap">
             <label class="label" for="text-letter">Текст письма:</label><br>
             <textarea class="form__text" id="text-letter" placeholder="В свободной форме"></textarea>
-            <button class="form__button" type="button">
+            <button class="form__button" type="submit">
               <span class="button__text">отправить</span>
             </button>
           </div>
