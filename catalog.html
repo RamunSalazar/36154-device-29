@@ -32,10 +32,9 @@
           <a href="" class="link header-catalog__link">Корзина</a>
         </div>
         <div class="catalog-wrap">
-          <a href="catalog.html" class="link catalog-link">каталог товаров</a>
-          <svg class="img catalog-img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.7 6.9V9.1H9.10005V15.7H6.90005V9.1H0.300049V6.9H6.90005V0.300003H9.10005V6.9H15.7Z" fill="black" fill-opacity="0.3"/>
-          </svg>
+          <a href="catalog.html" class="link catalog-link">
+            <span class="catalog-link__text">каталог товаров</span>
+          </a>
           <div  class="header__catalog-wrap">
             <ul class="list header__catalog-list">
               <li class="list__item header__catalog-list__item">
@@ -84,15 +83,15 @@
       <div class="catalog__control-container catalog-control">
         <h2 class="title catalog-control__title">Моноподы для селфи</h2>
         <div class="link-wrap">
-          <a href="" class="link catalog-control__link">Главная</a>
-          <svg class="catalog-control__img" width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.147461 5.44244L2.43746 3.14744L0.147461 0.852442L0.852461 0.147442L3.85246 3.14744L0.852461 6.14744L0.147461 5.44244Z" fill="black"/>
-          </svg>
-          <a href="" class="link catalog-control__link">Каталог товаров</a>
-          <svg class="catalog-control__img" width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.147461 5.44244L2.43746 3.14744L0.147461 0.852442L0.852461 0.147442L3.85246 3.14744L0.852461 6.14744L0.147461 5.44244Z" fill="black"/>
-          </svg>
-          <a href="" class="link catalog-control__link">Моноподы для селфи</a>
+          <a href="" class="link catalog-control__link">
+            <span class="catalog-control__link-text">Главная</span>
+          </a>
+          <a href="" class="link catalog-control__link">
+            <span class="catalog-control__link-text">Каталог товаров</span>
+          </a>
+          <a href="" class="link catalog-control__link">
+            <span class="catalog-control__link-text">Моноподы для селфи</span>
+          </a>
         </div>
       </div>
 
@@ -289,15 +288,16 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer__column">
+      <div class="container footer-catalog__container">
+        <div class="footer-catalog__column">
           <a href="index.html" class="link ">
             <img class="img footer__logo" src="img/logo-bottom.svg" width="163" height="35" alt="Возврат на главную страницу">
           </a>
           <p class="address">г. Москва, ул. Строителей, 15</p>
         </div>
-        <div class="footer__column">
-          <nav class="footer__navigation">
+        <div class="footer-catalog__column">
+
+          <nav class="footer-catalog__navigation">
             <ul class="list footer-navigation__list">
               <li class="list__item footer__item">
                 <a href="" class="link footer-navigation__link footer__link">доставка</a>
@@ -338,18 +338,20 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div class="footer__column">
+
           <div class="footer-catalog__control">
             <a href="" class="link footer-catalog__link footer__link">Валентин Петухов</a>
             <a href="" class="link footer-catalog__link footer__link">Выйти</a>
             <a href="" class="link footer-catalog__link footer__link">Сравнить</a>
             <a href="" class="link footer-catalog__link footer__link">Корзина</a>
           </div>
-          <a href="tel:+74954959595" class="link footer__link footer__phone-link">Тел.: +7 (495) 495-95-95</a>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="">
-            <img class="img footer__academy-logo" src="img/academy-logo.svg" width="27" height="34" alt="Перейти на сайт академии">
-          </a>
+          <div class="footer-wrap">
+            <a href="tel:+74954959595" class="link footer__link footer__phone-link">Тел.: +7 (495) 495-95-95</a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="">
+              <img class="img footer__academy-logo" src="img/academy-logo.svg" width="27" height="34" alt="Перейти на сайт академии">
+            </a>
+          </div>
+
         </div>
       </div>
     </footer>
