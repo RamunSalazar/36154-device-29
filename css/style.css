@@ -1357,6 +1357,7 @@
 .link-wrap {
   display: flex;
   margin-bottom: -20px;
+  margin-left: -15px;
 }
 
 .catalog-control__title {
@@ -1369,9 +1370,12 @@
   font-size: 14px;
   line-height: 19px;
   padding: 20px 15px;
-  margin-left: -15px;
-  margin-right: 25px;
   position: relative;
+  margin-right: 12px;
+}
+
+.catalog-control__link:nth-child(2) {
+  margin-right: 10px;
 }
 
 .catalog-control__link:not(:last-child)::after {
@@ -1385,7 +1389,7 @@
 }
 
 .catalog-control__link:nth-child(2)::after {
-  right: -10px;
+  right: -8px;
 }
 
 .catalog-control__img:nth-child(2) {
@@ -1967,6 +1971,10 @@
 
 .button-compare:active {
   opacity: 0.2;
+}
+
+.catalog-cart__item:focus-within .cart {
+  opacity: 0.7;
 }
 
 .switch-page__control {
