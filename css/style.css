@@ -289,7 +289,7 @@
 .catalog-link {
   position: relative;
   margin-left: -15px;
-  margin-top: 6px;
+  margin-top: 16px;
   max-width: 500px;
   word-wrap: break-word;
 }
@@ -360,8 +360,8 @@
 .header-catalog__link,
 .header-control__link {
   display: block;
-  padding: 25px;
-  margin-top: -25px;
+  padding: 15px 25px;
+  margin-top: -15px;
   position: relative;
   max-width: 480px;
   word-wrap: break-word;
@@ -371,7 +371,7 @@
 .header-control__link::before {
   content: "";
   position: absolute;
-  top: 31px;
+  top: 21px;
   left: 2px;
   width: 10px;
   height: 10px;
@@ -405,7 +405,7 @@
 
 .header-control__link:nth-child(3)::before {
   left: 4px;
-  top: 30px;
+  top: 20px;
   background: url('../img/bascet.svg') no-repeat 0 0;
 }
 
@@ -441,7 +441,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;
-  margin-top: 6px;
+  margin-top: 16px;
 }
 
 .header__item:nth-child(3n) {
@@ -656,7 +656,8 @@
     transparent 24px
     );
 }
-.promo__link:hover {
+.promo__link:hover,
+.promo__link:focus {
   background-image: none;
   background-color: var(--special-yellow-dark);
 }
@@ -680,7 +681,8 @@
   word-wrap: break-word;
 }
 
-.category__link:hover .category__img-wrap {
+.category__link:hover .category__img-wrap,
+.category__link:focus .category__img-wrap {
   background-color: var(--special-yellow-dark);
 }
 
@@ -898,7 +900,8 @@
 
 }
 
-.partner-img:hover {
+.partner-img:hover,
+.partner-img:focus {
   filter: grayscale(0);
 }
 /*----------COMMON_INFO---------------------------------------------------------------------------------------*/
@@ -1013,7 +1016,8 @@
   text-transform: uppercase;
 }
 
-.common-info__link:hover {
+.common-info__link:hover,
+.common-info__link:focus {
   background-image: none;
   background-color: var(--special-yellow-dark);
 }
@@ -1079,6 +1083,10 @@
   margin: 0;
 }
 
+.footer__column:first-child {
+  margin-top: 64px;
+}
+
 .footer-catalog__column:first-child,
 .footer__column:first-child {
   position: relative;
@@ -1091,7 +1099,7 @@
   height: 7px;
   background-color: var(--special-yellow-dark);
   position: absolute;
-  top: 239px;
+  top: 175px;
 }
 
 .footer-catalog__column:last-child {
@@ -1143,13 +1151,12 @@
   opacity: 0.3;
 }
 
-.footer__logo {
-  margin-top: 64px;
+.footer__logo-link {
   margin-bottom: 37px;
 }
 
 .footer__navigation {
-  margin-top: 112px;
+  margin-top: 122px;
   margin-left: 3px;
 }
 
@@ -1161,10 +1168,11 @@
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 25px 15px;}
+  padding: 15px;
+}
 
 .social {
-  margin-top: 43px;
+  margin-top: 53px;
   margin-bottom: 100px;
 }
 
@@ -1193,8 +1201,8 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   width: 305px;
-  margin-top: 21px;
-  margin-bottom: 48px;
+  margin-top: 35px;
+  margin-bottom: 64px;
 }
 
 .footer-catalog__control {
@@ -1219,11 +1227,11 @@
 }
 
 .footer-control__link {
-  margin-left: 35px;
+  margin-left: 20px;
 }
 
 .footer-control__link:nth-child(1) {
-  margin-left: -15px;
+  margin-left: -50px;
 }
 
 .footer-control__link:nth-child(3) {
@@ -1233,7 +1241,7 @@
 .footer-catalog__link,
 .footer-control__link {
   display: block;
-  padding: 25px 15px;
+  padding: 10px 15px 10px 30px;
   position: relative;
   max-width: 280px;
   word-wrap: break-word;
@@ -1248,20 +1256,20 @@
 }
 
 .footer-control__link:nth-child(1)::before {
-  top: 31px;
-  left: -8px;
+  top: 17px;
+  left: 7px;
   background: url('../img/enter-bottom.svg') no-repeat center center;
 }
 
 .footer-control__link:nth-child(2)::before {
-  top: 32px;
-  left: -7px;
+  top: 18px;
+  left: 8px;
   background: url('../img/compare-bottom.svg') no-repeat center center;
 }
 
 .footer-control__link:nth-child(3)::before {
-  top: 30px;
-  left: -7px;
+  top: 16px;
+  left: 8px;
   background: url('../img/bascet-bottom.svg') no-repeat center center;
 }
 
@@ -1287,6 +1295,7 @@
 .footer-catalog__link {
   opacity: 0.7;
 }
+
 .footer-control__link:hover,
 .footer-catalog__link:hover {
   opacity: 1;
@@ -1314,7 +1323,8 @@
 .footer-catalog__button:active {
   opacity: 0.3;
 }
-.footer__academy-logo {
+
+.footer__column:last-child {
   margin-bottom: 50px;
 }
 
