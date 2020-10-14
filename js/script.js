@@ -13,6 +13,7 @@ const textarea = modalFeedback.querySelector('.form__text');
 const mapLink = document.querySelector('.contacts__img-link');
 const modalMap = document.querySelector('.modal__map-wrap');
 const closeMapButton = modalMap.querySelector('.modal-close');
+const body = document.querySelector('.page__body');
 let isStorageNameSupport = true;
 let isStorageEmailSupport = true;
 let storageName = "";
@@ -118,6 +119,7 @@ for (let i=0; i<serviceButton.length; i++) {
 
 writeUsButton.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.style.overflow = 'hidden';
   modalFeedback.classList.add('modal-show');
   if(storageName && !storageEmail) {
     inputName.value = storageName;
@@ -133,6 +135,7 @@ writeUsButton.addEventListener('click', function(evt) {
 
 closeFeedbackButton.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.style.overflow = 'visible';
   modalFeedback.classList.remove('modal-show');
 });
 
@@ -151,21 +154,25 @@ feedbackForm.addEventListener('submit', function(evt) {
 
 mapLink.addEventListener('click', function(evt) {
   evt.preventDefault();
+  body.style.overflow = 'hidden';
   modalMap.classList.add('modal-show');
 });
 
-closeMapButton.addEventListener('click', function() {
+closeMapButton.addEventListener('click', function(evt) {
   evt.preventDefault();
-  modalMap.classList.add('modal-show');
+  body.style.overflow = 'visible';
+  modalMap.classList.remove('modal-show');
 });
 
 window.addEventListener('keydown', function(evt) {
   if (evt.keyCode == 27) {
     if (modalFeedback.classList.contains('modal-show')) {
       evt.preventDefault();
+      body.style.overflow = 'visible';
       modalFeedback.classList.remove('modal-show');
     } else if (modalMap.classList.contains('modal-show')) {
       evt.preventDefault();
+      body.style.overflow = 'visible';
       modalMap.classList.remove('modal-show');
     }
   }
