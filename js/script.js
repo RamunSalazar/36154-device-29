@@ -1,71 +1,172 @@
-function promo_click_button(elem) {
-  var arr_btn = document.querySelectorAll('.promo__button');
-  var arr_slide = document.querySelectorAll('.promo__slide');
-  var arr_btn_wrap = document.querySelectorAll('.promo__button-wrap');
-  var index = 0;
-  var slide_index = 0;
-  for (var i=0; i<arr_btn.length; i++) {
-    if (arr_btn[i].classList.contains('promo-visibility')) {
-      arr_btn[i].classList.remove('promo-visibility');
+const promoSlides = document.querySelectorAll('.promo__slide');
+const promoButtonsWraps = document.querySelectorAll('.promo__button-wrap');
+const promoButtons = document.querySelectorAll('.promo__button');
+const serviceButton = document.querySelectorAll('.service__button');
+const serviceDescription = document.querySelectorAll('.service__description');
+const writeUsButton = document.querySelector('.write-us__button');
+const modalFeedback = document.querySelector('.modal__feedback-wrap');
+const closeFeedbackButton = modalFeedback.querySelector('.modal-close');
+const inputName = modalFeedback.querySelector('input[type=text]');
+const inputEmail = modalFeedback.querySelector('input[type=email]');
+const feedbackForm = modalFeedback.querySelector('.feedback');
+const textarea = modalFeedback.querySelector('.form__text');
+const mapLink = document.querySelector('.contacts__img-link');
+const modalMap = document.querySelector('.modal__map-wrap');
+const closeMapButton = modalMap.querySelector('.modal-close');
+let isStorageNameSupport = true;
+let isStorageEmailSupport = true;
+let storageName = "";
+let storageEmail = "";
+
+function promoRemoveClass() {
+  for (let i=0; i<promoButtons.length; i++) {
+    if (promoButtons[i].classList.contains('promo-visibility')) {
+      promoButtons[i].classList.remove('promo-visibility');
     }
   }
-  for (var i=0; i<arr_btn_wrap.length; i++) {
-    for (var j=0; j<arr_btn_wrap[i].children.length; j++) {
-      if (arr_btn_wrap[i].children[j] == elem) {
-        arr_btn_wrap[j].children[j].classList.add('promo-visibility');
-        index = i;
+}
+
+function promoAddClass(evt) {
+  for (let i=0; i<promoButtonsWraps.length; i++) {
+    for (let j=0; j<promoButtonsWraps[i].children.length; j++) {
+      if (promoButtonsWraps[i].children[j] == evt) {
+        promoButtonsWraps[j].children[j].classList.add('promo-visibility');
+      }
+    }
+  }
+}
+
+function promoFindIndex(evt) {
+  let promoFindIndex=0;
+  for (let i=0; i<promoButtonsWraps.length; i++) {
+    for (let j=0; j<promoButtonsWraps[i].children.length; j++) {
+      if (promoButtonsWraps[i].children[j] == evt) {
+        promoFindIndex = i;
         break;
       }
     }
   }
-  arr_slide[index].style.display = 'none';
-  for (var i=0; i<arr_btn_wrap.length; i++) {
-    for (var j=0; j<arr_btn_wrap[i].children.length; j++) {
-      if (arr_btn_wrap[i].children[j] == elem) {
-        slide_index = j;
+  return promoFindIndex;
+}
+
+function promoFindIndexSlide(evt) {
+  let fSlideIndex = 0;
+  for (let i=0; i<promoButtonsWraps.length; i++) {
+    for (let j=0; j<promoButtonsWraps[i].children.length; j++) {
+      if (promoButtonsWraps[i].children[j] == evt) {
+        fSlideIndex = j;
         break;
       }
     }
   }
-  arr_slide[slide_index].style.display = 'grid';
+  return fSlideIndex;
 }
 
-function service_click_button(elem) {
-  var arr_btn = document.querySelectorAll('.service__button');
-  var arr_desc = document.querySelectorAll('.service__description');
-  var index = 0;
-  var desc_index = 0;
-  for (var i=0; i<arr_desc.length; i++) {
-    if (arr_desc[i].classList.contains('service-visibility')) {
-      arr_desc[i].classList.remove('service-visibility');
-      arr_desc[i].classList.add('service-hidden');
+function serviceRemoveAddClass() {
+  for (let i=0; i<serviceDescription.length; i++) {
+    if (serviceDescription[i].classList.contains('service-visibility')) {
+      serviceDescription[i].classList.remove('service-visibility');
+      serviceDescription[i].classList.add('service-hidden');
     }
   }
-  for (var i=0; i<arr_btn.length; i++) {
-    if (arr_btn[i] == elem) {
-      desc_index = i;
+}
+
+function serviceFindIndex(evt) {
+  let descIndex = 0;
+  for (let i=0; i<serviceButton.length; i++) {
+    if (serviceButton[i] == evt) {
+      descIndex = i;
     }
   }
-  arr_desc[desc_index].classList.remove('service-hidden');
-  arr_desc[desc_index].classList.add('service-visibility');
+  return descIndex;
 }
 
-function modal_feedback_display_on() {
-  document.querySelector('.modal__feedback-wrap').style.display="flex";
-  document.querySelector('.page__body').style.overflow="hidden";
+try {
+  storageName = localStorage.getItem("name");
+} catch (err) {
+  isStorageNameSupport = false;
 }
 
-function modal_feedback_close() {
-  document.querySelector('.modal__feedback-wrap').style.display="none";
-  document.querySelector('.page__body').style.overflow="visible";
+try {
+  storageEmail = localStorage.getItem("email");
+} catch (err) {
+  isStorageEmailSupport = false;
 }
 
-function modal_map_display_on() {
-  document.querySelector('.modal__map-wrap').style.display="flex";
-  document.querySelector('.page__body').style.overflow="hidden";
+for (let i=0; i<promoButtons.length; i++) {
+  let index = 0;
+  let slideIndex = 0;
+  promoButtons[i].addEventListener('click', function(evt) {
+    promoRemoveClass();
+    promoAddClass(evt.path[0]);
+    index = promoFindIndex(evt.path[0]);
+    promoSlides[index].style.display = 'none';
+    slideIndex = promoFindIndexSlide(evt.path[0]);
+    promoSlides[slideIndex].style.display = 'grid';
+  });
 }
 
-function modal_map_close() {
-  document.querySelector('.modal__map-wrap').style.display="none";
-  document.querySelector('.page__body').style.overflow="visible";
+for (let i=0; i<serviceButton.length; i++) {
+  let index = 0;
+  serviceButton[i].addEventListener('click', function(evt){
+    serviceRemoveAddClass();
+    index = serviceFindIndex(evt.path[0]);
+    serviceDescription[index].classList.remove('service-hidden');
+    serviceDescription[index].classList.add('service-visibility');
+  });
 }
+
+writeUsButton.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  modalFeedback.classList.add('modal-show');
+  if(storageName && !storageEmail) {
+    inputName.value = storageName;
+    inputEmail.focus();
+  } else if(storageName && storageEmail){
+    inputName.value = storageName;
+    inputEmail.value = storageEmail;
+    textarea.focus();
+  } else {
+    inputName.focus();
+  }
+});
+
+closeFeedbackButton.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  modalFeedback.classList.remove('modal-show');
+});
+
+feedbackForm.addEventListener('submit', function(evt) {
+  if (!inputName.value || !inputEmail.value) {
+    evt.preventDefault();
+  } else {
+    if (isStorageNameSupport && !isStorageEmailSupport) {
+      localStorage.setItem("name", inputName.value);
+    } else if (isStorageNameSupport && isStorageEmailSupport) {
+      localStorage.setItem("name", inputName.value);
+      localStorage.setItem("email", inputEmail.value);
+    }
+  }
+});
+
+mapLink.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  modalMap.classList.add('modal-show');
+});
+
+closeMapButton.addEventListener('click', function() {
+  evt.preventDefault();
+  modalMap.classList.add('modal-show');
+});
+
+window.addEventListener('keydown', function(evt) {
+  if (evt.keyCode == 27) {
+    if (modalFeedback.classList.contains('modal-show')) {
+      evt.preventDefault();
+      modalFeedback.classList.remove('modal-show');
+    } else if (modalMap.classList.contains('modal-show')) {
+      evt.preventDefault();
+      modalMap.classList.remove('modal-show');
+    }
+  }
+});
