@@ -3,7 +3,7 @@ const promoButtonsWraps = document.querySelectorAll('.promo__button-wrap');
 const promoButtons = document.querySelectorAll('.promo__button');
 const serviceButton = document.querySelectorAll('.service__button');
 const serviceDescription = document.querySelectorAll('.service__description');
-const writeUsButton = document.querySelector('.write-us__button');
+const writeUsLink = document.querySelector('.write-us__link');
 const modalFeedbackWrap = document.querySelector('.modal__feedback-wrap');
 const modalFeedback = modalFeedbackWrap.querySelector('.modal-feedback');
 const closeFeedbackButton = modalFeedbackWrap.querySelector('.modal-close');
@@ -126,7 +126,7 @@ for (let i=0; i<serviceButton.length; i++) {
   });
 }
 
-writeUsButton.addEventListener('click', function(evt) {
+writeUsLink.addEventListener('click', function(evt) {
   evt.preventDefault();
   body.style.overflow = 'hidden';
   modalFeedbackWrap.classList.add('modal-show');

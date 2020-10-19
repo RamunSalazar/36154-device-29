@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
 
@@ -17,8 +17,8 @@
         </div>
         <div class="header__search-form">
           <form class="header__form" method="post" action="https://echo.htmlacademy.ru">
-            <label for="header__search" class="header__search-element"></label>
-            <input id="header__search" class="header__search-string" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            <label for="header__search" class="header__search-element" aria-label="Поиск по сайту"></label>
+            <input id="header__search" class="header__search-string" type="search" placeholder="Поиск по сайту">
             <button class="header__search-button" type="submit">
               <span class="header__button-text">найти</span>
             </button>
@@ -359,9 +359,9 @@
             <a href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687034,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618?hl=ru" class="contacts__img-link">
               <img class="img contacts__img" src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
             </a>
-            <button type="button" class="write-us__button">
+            <a href="writeus.html" type="button" class="link write-us__link">
               <span class="common-info__button__text">напишите нам</span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -371,7 +371,7 @@
       <div class="container footer-container">
         <div class="footer__column">
           <a href="index.html" class="link footer__logo-link">
-            <img class="img" src="img/logo-bottom.svg" width="163" height="35" alt="Возврат на главную страницу">
+            <img class="img footer__logo" src="img/logo-bottom.svg" width="163" height="35" alt="Возврат на главную страницу">
           </a>
           <p class="address">г. Москва, ул. Строителей, 15</p>
         </div>
@@ -422,7 +422,7 @@
             <a href="" class="link footer-control__link footer__link">Корзина</a>
           </div>
           <a href="tel:+74954959595" class="link footer__link footer__phone-link">Тел.: +7 (495) 495-95-95</a>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="">
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy__logo-link">
             <img class="img footer__academy-logo" src="img/academy-logo.svg" width="27" height="34" alt="Перейти на сайт академии">
           </a>
         </div>
@@ -461,6 +461,6 @@
       </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
