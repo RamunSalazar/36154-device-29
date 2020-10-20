@@ -392,7 +392,6 @@
 .catalog__link {
   width: 180px;
   word-wrap: break-word;
-  display: inline-block;
   padding: 5px 10px;
 }
 
@@ -526,6 +525,14 @@
 
 .header__item:nth-child(2) {
   margin-right: 76px;
+}
+
+.writeus-header {
+  padding-bottom: 500px;
+}
+
+.writeus-body {
+  overflow: hidden;
 }
 /*----------PROMO---------------------------------------------------------------------------------------*/
 .promo {
